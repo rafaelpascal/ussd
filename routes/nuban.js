@@ -7,52 +7,32 @@ const seed = "373373373373";
 const nubanLength = 10;
 const serialNumLength = 9;
 
-// module.exports = {
-//   getAccountBanks: (req, res, next) => {
-//     let accountNumber = req.params.account;
-
-//     let accountBanks = [];
-
-//     banks.forEach((item, index) => {
-//       if (isBankAccountValid(accountNumber, item.code)) {
-//         accountBanks.push(item);
-//       }
-//     });
-
-//     res.send(accountBanks);
-//   },
-// };
 let NewaccountBanks = [];
 let selectedBank = "";
 let selectedPeriod = {};
 let account = 0;
-
+let result = "";
 module.exports = {
   ussd: async (req, res, next) => {
     const { sessionId, serviceCode, phoneNumber, text } = req.params;
     let response = "";
     let accountBanks = [];
     let numberedItems = "";
-    const selectedBankIndex = 1;
+
     // Example usage:
     const apiUrl = "https://nkeazu.abia.live/veripay/payslip";
-    const postData = {
-      month: JSON.stringify(selectedPeriod.month),
-      year: JSON.stringify(selectedPeriod.year),
-      bankName: selectedBank,
-      accountNumber: JSON.stringify(account),
-    };
     const customHeaders = {
       clientKey:
         "CrztedLCxb2EArUOkSWjJMpw0Ngg1pWJXR0ccLttFwD7VT9547AW4645WSeVijLX2TGjcRGLcXPI4gyoaFcC296SwiGOarK4xAAK1YCvuxo6fH7VUPBydpf4ZU5EW7LUqmwbVmOjiHHfcxVCNoMzrez8xmEwnNKjC6PfwP85ahGv6ZKm0OqL411hg2lHj", // Add your custom headers here
     };
 
     async function makePostRequest(url, data, customHeaders) {
+      console.log("LOOOOg", url, data, customHeaders);
       try {
         const response = await axios.post(url, data, {
           headers: {
-            "Content-Type": "application/json", // Example content type
-            ...customHeaders, // Add your custom headers here
+            "Content-Type": "application/json",
+            ...customHeaders,
           },
         });
 
@@ -61,7 +41,7 @@ module.exports = {
         return response.data;
       } catch (error) {
         // Handle errors here
-        console.error("Error:", error.data);
+        console.error("Error:", error.message);
         // throw error; // Rethrow the error if needed
       }
     }
@@ -79,6 +59,39 @@ module.exports = {
       }
     }
 
+    function getPreviousMonths() {
+      const currentDate = new Date();
+      const previousMonths = [];
+
+      // Loop to get the dates for the last 3 months
+      for (let i = 1; i <= 3; i++) {
+        const newDate = new Date(currentDate);
+        newDate.setMonth(currentDate.getMonth() - i);
+
+        // Get month name
+        const monthName = new Intl.DateTimeFormat("en", {
+          month: "long",
+        }).format(newDate);
+
+        // Format: 'Month YYYY'
+        previousMonths.push(`${monthName} ${newDate.getFullYear()}`);
+      }
+
+      return previousMonths;
+    }
+
+    // Pick out the Dates from the array
+    function displayDatesAsText(dates) {
+      let response = "Select Period \n";
+
+      dates.forEach((date, index) => {
+        response += `${index + 1}. ${date}\n`;
+      });
+
+      return response;
+    }
+
+    // Get The 3 Previous Month
     function parseMonthAndYear(dateString) {
       const dateParts = dateString.split(" ");
       if (dateParts.length !== 2) {
@@ -120,40 +133,106 @@ module.exports = {
     ) {
       const selectedOption = parseInt(text.split("*")[3]);
       if (!isNaN(selectedOption) && selectedOption > 0 && selectedOption == 1) {
-        const inputDate = "January 2024";
-        selectedPeriod = parseMonthAndYear(inputDate);
+        console.log("INDEX 0", result[0]);
+        const inputDate = `${result[0]}`;
+        const selectedPeriod = parseMonthAndYear(inputDate);
+        const postData = {
+          month: JSON.stringify(selectedPeriod.month),
+          year: JSON.stringify(selectedPeriod.year),
+          bankName: selectedBank,
+          accountNumber: JSON.stringify(account),
+        };
         const periodRes = await makePostRequest(
           apiUrl,
           postData,
           customHeaders
         );
-        response = `END ${JSON.stringify(periodRes.data, null, 2)}`;
+        if (periodRes.message === "Successfully") {
+          if (periodRes.data.paymentStatus === "00") {
+            // response = `END ${JSON.stringify(periodRes.data, null, 2)}`;
+            response = `END Payment is Successful`;
+          } else if (periodRes.data.paymentStatus === "10") {
+            response = `END Failed Nuban Validation`;
+          } else if (periodRes.data.paymentStatus === "15") {
+            response = `END Payment Failed`;
+          } else if (periodRes.data.paymentStatus === "06") {
+            response = `END Payment in Progress`;
+          } else {
+            response = `END Paymnet not found`;
+          }
+        } else {
+          response = `END Payment not found`;
+        }
       } else if (
         !isNaN(selectedOption) &&
         selectedOption > 0 &&
         selectedOption == 2
       ) {
-        const inputDate = "Fabruary 2024";
-        selectedPeriod = parseMonthAndYear(inputDate);
+        console.log("INDEX 1", result[1]);
+        const inputDate = "February 2024";
+        const selectedPeriod = parseMonthAndYear(inputDate);
+        const postData = {
+          month: JSON.stringify(selectedPeriod.month),
+          year: JSON.stringify(selectedPeriod.year),
+          bankName: selectedBank,
+          accountNumber: JSON.stringify(account),
+        };
         const periodRes = await makePostRequest(
           apiUrl,
           postData,
           customHeaders
         );
-        response = `END ${JSON.stringify(periodRes.data, null, 2)}`;
+        if (periodRes.message === "Successfully") {
+          if (periodRes.data.paymentStatus === "00") {
+            // response = `END ${JSON.stringify(periodRes.data, null, 2)}`;
+            response = `END Payment is Successful`;
+          } else if (periodRes.data.paymentStatus === "10") {
+            response = `END Failed Nuban Validation`;
+          } else if (periodRes.data.paymentStatus === "15") {
+            response = `END Payment Failed`;
+          } else if (periodRes.data.paymentStatus === "06") {
+            response = `END Payment in Progress`;
+          } else {
+            response = `END Paymnet not found`;
+          }
+        } else {
+          response = `END Payment not found`;
+        }
       } else if (
         !isNaN(selectedOption) &&
         selectedOption > 0 &&
         selectedOption == 3
       ) {
-        const inputDate = "March 2024";
+        const inputDate = `${result[2]}`;
         selectedPeriod = parseMonthAndYear(inputDate);
+        const postData = {
+          month: JSON.stringify(selectedPeriod.month),
+          year: JSON.stringify(selectedPeriod.year),
+          bankName: selectedBank,
+          accountNumber: JSON.stringify(account),
+        };
         const periodRes = await makePostRequest(
           apiUrl,
           postData,
           customHeaders
         );
-        response = `END ${JSON.stringify(periodRes.data, null, 2)}`;
+
+        if (periodRes.message === "Successfully") {
+          if (periodRes.data.paymentStatus === "00") {
+            // response = `END ${JSON.stringify(periodRes.data, null, 2)}`;
+            response = `END Payment is Successful`;
+          } else if (periodRes.data.paymentStatus === "10") {
+            response = `END Failed Nuban Validation`;
+          } else if (periodRes.data.paymentStatus === "15") {
+            response = `END Payment Failed`;
+          } else if (periodRes.data.paymentStatus === "06") {
+            response = `END Payment in Progress`;
+          } else {
+            response = `END Paymnet not found`;
+          }
+        } else {
+          response = `END Payment not found`;
+        }
       } else {
         response = `END Nothing Selected`;
       }
@@ -171,11 +250,10 @@ module.exports = {
       ) {
         selectedBank = NewaccountBanks[0][selectedOption - 1];
         // bankSelected = true;
-        response = `CON You selected: ${selectedBank} 
-        Select Period 
-        1. January 2024 
-        2. Fabruary 2024 
-        3. March 2024`;
+        result = getPreviousMonths();
+        const ussdResponse = displayDatesAsText(result);
+        console.log(ussdResponse);
+        response = `CON You selected: ${selectedBank} \n ${ussdResponse}`;
       } else {
         response = `CON Invalid selection. Please enter a valid option.`;
       }
@@ -185,7 +263,7 @@ module.exports = {
       if (userEnteredAccount !== "" && !isNaN(userEnteredAccount)) {
         account = parseInt(userEnteredAccount);
 
-        accountBanks = []; // Clear the array before making a new request
+        accountBanks = [];
         await makeRequest(userEnteredAccount);
 
         if (accountBanks.length > 0) {
