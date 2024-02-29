@@ -23,11 +23,10 @@ module.exports = {
     const apiUrl = "https://nkeazu.abia.live/veripay/payslip";
     const customHeaders = {
       clientKey:
-        "CrztedLCxb2EArUOkSWjJMpw0Ngg1pWJXR0ccLttFwD7VT9547AW4645WSeVijLX2TGjcRGLcXPI4gyoaFcC296SwiGOarK4xAAK1YCvuxo6fH7VUPBydpf4ZU5EW7LUqmwbVmOjiHHfcxVCNoMzrez8xmEwnNKjC6PfwP85ahGv6ZKm0OqL411hg2lHj", // Add your custom headers here
+        "CrztedLCxb2EArUOkSWjJMpw0Ngg1pWJXR0ccLttFwD7VT9547AW4645WSeVijLX2TGjcRGLcXPI4gyoaFcC296SwiGOarK4xAAK1YCvuxo6fH7VUPBydpf4ZU5EW7LUqmwbVmOjiHHfcxVCNoMzrez8xmEwnNKjC6PfwP85ahGv6ZKm0OqL411hg2lHj",
     };
 
     async function makePostRequest(url, data, customHeaders) {
-      console.log("LOOOOg", url, data, customHeaders);
       try {
         const response = await axios.post(url, data, {
           headers: {
@@ -37,7 +36,6 @@ module.exports = {
         });
 
         // You can handle the response here
-        console.log(response.data);
         return response.data;
       } catch (error) {
         // Handle errors here
@@ -133,7 +131,6 @@ module.exports = {
     ) {
       const selectedOption = parseInt(text.split("*")[3]);
       if (!isNaN(selectedOption) && selectedOption > 0 && selectedOption == 1) {
-        console.log("INDEX 0", result[0]);
         const inputDate = `${result[0]}`;
         const selectedPeriod = parseMonthAndYear(inputDate);
         const postData = {
