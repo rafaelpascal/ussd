@@ -2,6 +2,7 @@ const fs = require("fs");
 const axios = require("axios");
 const rawdata = fs.readFileSync("banks.json");
 const banks = JSON.parse(rawdata);
+require("dotenv").config();
 
 const seed = "373373373373";
 const nubanLength = 10;
@@ -20,10 +21,9 @@ module.exports = {
     let numberedItems = "";
 
     // Example usage:
-    const apiUrl = "https://nkeazu.abia.live/veripay/payslip";
+    const apiUrl = process.env.PAYSLIP_URL;
     const customHeaders = {
-      clientKey:
-        "CrztedLCxb2EArUOkSWjJMpw0Ngg1pWJXR0ccLttFwD7VT9547AW4645WSeVijLX2TGjcRGLcXPI4gyoaFcC296SwiGOarK4xAAK1YCvuxo6fH7VUPBydpf4ZU5EW7LUqmwbVmOjiHHfcxVCNoMzrez8xmEwnNKjC6PfwP85ahGv6ZKm0OqL411hg2lHj",
+      clientKey: process.env.CLIENT_KEY,
     };
 
     async function makePostRequest(url, data, customHeaders) {
@@ -249,7 +249,6 @@ module.exports = {
         // bankSelected = true;
         result = getPreviousMonths();
         const ussdResponse = displayDatesAsText(result);
-        console.log(ussdResponse);
         response = `CON You selected: ${selectedBank} \n ${ussdResponse}`;
       } else {
         response = `CON Invalid selection. Please enter a valid option.`;
