@@ -61,7 +61,7 @@ module.exports = {
 
         // Log to File
         logger.error(JSON.stringify(logObject));
-        // throw error;
+        return error;
       }
     }
 
