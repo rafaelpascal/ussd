@@ -2,7 +2,7 @@ var nubanUtil = require("./nuban");
 
 module.exports = function (server) {
   server.get("/", (req, res, next) => {
-    res.send("Initial page here");
+    res.send("Appmart Ussd Payment status verification Is Running");
   });
 
   server.post("/accounts/banks", (req, res, next) => {

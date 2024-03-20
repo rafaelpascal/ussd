@@ -1,0 +1,64 @@
+2024-03-20T09:48:26.027Z - error: 
+{
+  "On": "Wed Mar 20 2024:10:48:23 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "u98rqoeiuqwe09reroeiu89rwuoi09",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "Error": {
+    "error": true,
+    "message": "The \"key\" argument must be of type string or an instance of ArrayBuffer, Buffer, TypedArray, DataView, KeyObject, or CryptoKey. Received undefined"
+  }
+}
+2024-03-20T09:57:44.762Z - error: 
+{
+  "On": "Wed Mar 20 2024:10:57:43 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ebd915ed-832e-48e7-87c2-3d9a09e5b638",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "Error": {
+    "error": true,
+    "message": "The \"key\" argument must be of type string or an instance of ArrayBuffer, Buffer, TypedArray, DataView, KeyObject, or CryptoKey. Received undefined"
+  }
+}
+2024-03-20T10:03:23.410Z - error: 
+{
+  "On": "Wed Mar 20 2024:11:03:22 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "u98rqoeiuqwe09reroeiu89rwuoi09",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "Error": {
+    "error": true,
+    "message": "The \"key\" argument must be of type string or an instance of ArrayBuffer, Buffer, TypedArray, DataView, KeyObject, or CryptoKey. Received undefined"
+  }
+}
+2024-03-20T10:06:39.929Z - error: 
+{
+  "On": "Wed Mar 20 2024:11:06:38 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "u98rqoeiuqwe09reroeiu89rwuoi09",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "Error": {
+    "error": true,
+    "message": "The \"key\" argument must be of type string or an instance of ArrayBuffer, Buffer, TypedArray, DataView, KeyObject, or CryptoKey. Received undefined"
+  }
+}

@@ -1,6 +1,7 @@
 const fs = require("fs");
 const axios = require("axios");
 const rawdata = fs.readFileSync("banks.json");
+const logger = require("../logger.js");
 const banks = JSON.parse(rawdata);
 require("dotenv").config();
 
@@ -13,12 +14,15 @@ let selectedBank = "";
 let selectedPeriod = {};
 let account = 0;
 let result = "";
+
 module.exports = {
   ussd: async (req, res, next) => {
-    const { sessionId, serviceCode, phoneNumber, text } = req.params;
+    const { sessionId, serviceCode, phoneNumber, text } = req.body;
+
     let response = "";
     let accountBanks = [];
     let numberedItems = "";
+    const date = new Date();
 
     // Example usage:
     const apiUrl = process.env.PAYSLIP_URL;
@@ -35,12 +39,29 @@ module.exports = {
           },
         });
 
-        // You can handle the response here
+        const logObject = {
+          On: `${date.toDateString()}:${date.toLocaleTimeString()}`,
+          PhoneNumber: `${phoneNumber}`,
+          SessionId: `${sessionId}`,
+          Payload: data,
+          response: response.data,
+        };
+
+        // Log to File
+        logger.info(JSON.stringify(logObject));
         return response.data;
       } catch (error) {
-        // Handle errors here
-        console.error("Error:", error.message);
-        // throw error; // Rethrow the error if needed
+        const logObject = {
+          On: `${date.toDateString()}:${date.toLocaleTimeString()}`,
+          PhoneNumber: `${phoneNumber}`,
+          SessionId: `${sessionId}`,
+          Payload: data,
+          Error: error.response.data,
+        };
+
+        // Log to File
+        logger.error(JSON.stringify(logObject));
+        // throw error;
       }
     }
 
@@ -110,6 +131,9 @@ module.exports = {
 
     // Check if the USSD session is new
     const isNewSession = text === "";
+    if (serviceCode !== "*379#") {
+      return res.send("Invalid Service Code");
+    }
 
     if (isNewSession) {
       // Clear the accountBanks array for a new session
@@ -120,15 +144,9 @@ module.exports = {
 
       response = `CON What would you like to check
         1. My Account Status`;
-    } else if (text == "1") {
+    } else if (text && text == "1") {
       response = `CON Input your Account number`;
-    } else if (
-      text.startsWith("1*") &&
-      // NewaccountBanks.length > 0 &&
-      selectedBank != ""
-      // !isNaN(account) &&
-      // text.endsWith("1")
-    ) {
+    } else if (text && text.startsWith("1*") && selectedBank != "") {
       const selectedOption = parseInt(text.split("*")[3]);
       if (!isNaN(selectedOption) && selectedOption > 0 && selectedOption == 1) {
         const inputDate = `${result[0]}`;
@@ -139,6 +157,7 @@ module.exports = {
           bankName: selectedBank,
           accountNumber: JSON.stringify(account),
         };
+
         const periodRes = await makePostRequest(
           apiUrl,
           postData,
@@ -146,7 +165,6 @@ module.exports = {
         );
         if (periodRes.message === "Successfully") {
           if (periodRes.data.paymentStatus === "00") {
-            // response = `END ${JSON.stringify(periodRes.data, null, 2)}`;
             response = `END Payment is Successful`;
           } else if (periodRes.data.paymentStatus === "10") {
             response = `END Failed Nuban Validation`;
@@ -165,8 +183,7 @@ module.exports = {
         selectedOption > 0 &&
         selectedOption == 2
       ) {
-        console.log("INDEX 1", result[1]);
-        const inputDate = "February 2024";
+        const inputDate = `${result[1]}`;
         const selectedPeriod = parseMonthAndYear(inputDate);
         const postData = {
           month: JSON.stringify(selectedPeriod.month),
@@ -234,6 +251,7 @@ module.exports = {
         response = `END Nothing Selected`;
       }
     } else if (
+      text &&
       text.startsWith("1*") &&
       NewaccountBanks.length > 0 &&
       !isNaN(account)
@@ -253,7 +271,7 @@ module.exports = {
       } else {
         response = `CON Invalid selection. Please enter a valid option.`;
       }
-    } else if (text.startsWith("1*")) {
+    } else if (text && text.startsWith("1*")) {
       const userEnteredAccount = text.substring(2).trim();
 
       if (userEnteredAccount !== "" && !isNaN(userEnteredAccount)) {
@@ -279,7 +297,6 @@ module.exports = {
 
     res.set({
       "Content-Type": "text/plain",
-      "Custom-Header": "Custom Value",
     });
     res.send(response);
   },
