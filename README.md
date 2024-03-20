@@ -1,93 +1,123 @@
-# Appmart USSD Payment Status
+# NUBAN (Nigerian Uniform Bank Account Number) Algorithm
 
+africantalking APIKEY = e8ef4d3f7ca2b1359adef98365d8663865f926b72d6008f5b778b213746dc4d7
 
+This repo contains the algorithm for generating and validating a NUBAN (Nigeria Uniform Bank Account Number) in Javascript. The algorithm is based on [this here CBN specification](https://www.cbn.gov.ng/OUT/2011/CIRCULARS/BSPD/NUBAN%20PROPOSALS%20V%200%204-%2003%2009%202010.PDF) for the 10-digit NUBAN. 10-digit is stated because CBN announced not too long ago that it's considering updating the specification for a NUBAN; which might see the NUBAN getting up to 16-digits in length.
 
-## Getting started
+## Setting up
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+- Clone the repo.
+- Navigate to the project root folder via terminal.
+- Assuming node is installed on your computer:
+  - Restore the node packages which the application depends on using `npm install`.
+  - Run `node index.js`.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## API Endpoints
 
-## Add your files
+### 1. **Get Account Banks**
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+Given any 10-digit Nigerian bank account number, this endpoint returns a JSON array of banks where that account number could be valid.
 
+A common application of this algorithm in Nigeria today is to cut down the list of banks on USSD interfaces from about 23 to less than 5 after the user enters their bank account number (NUBAN). This comes in handy because a USSD screen can display at most, 160 characters at a time.
+
+_Specification_
+
+`GET /accounts/{10-digit-NUBAN}/banks`
+
+_Sample request_
+
+`GET /accounts/5050114930/banks`
+
+_Sample response_
+
+```json
+[
+  {
+    "name": "PROVIDUS BANK",
+    "code": "101"
+  },
+  {
+    "name": "STANDARD CHARTERED BANK",
+    "code": "068"
+  },
+  {
+    "name": "WEMA BANK",
+    "code": "035"
+  },
+  {
+    "name": "ZENITH BANK",
+    "code": "057"
+  }
+]
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/appmart-development-team/appmart-ussd-payment-status.git
-git branch -M main
-git push -uf origin main
+
+_Bank model_
+
+- `name`: The name of the Nigerian bank.
+- `code`: The CBN unique identifier for the Nigerian Bank. This is a 3-digit literal.
+
+### 2. **Generate Bank Account**
+
+Given any 9-digit number (account serial number) and a 3-digit Nigerian bank code, this endpoint returns the full account number. Here is [a list of Nigerian bank codes](https://github.com/tomiiide/nigerian-banks/blob/master/banks.json) you can use to test this.
+
+_Specification_
+
+`POST /banks/{3-digit bank code}/accounts`
+
+```json
+{
+    "serialNumber"
+}
 ```
 
-## Integrate with your tools
+\*\* `serialNumber` should be 9-digits or less. If less than 9-digits, it will be left zero-padded.
 
-- [ ] [Set up project integrations](https://gitlab.com/appmart-development-team/appmart-ussd-payment-status/-/settings/integrations)
+_Sample request_
 
-## Collaborate with your team
+Generate a GTBank account number with serial number: '1656322'
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+`POST /accounts/058/banks` (058 is bank code for GTBank)
 
-## Test and Deploy
+```json
+{
+  "serialNumber": "1656322"
+}
+```
 
-Use the built-in continuous integration in GitLab.
+_Sample response_
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+```json
+{
+  "serialNumber": "001656322",
+  "nuban": "0016563228",
+  "name": "Hafiz Adewuyi's GTBank account number. Donations are invited!",
+  "bankCode": "058",
+  "bank": {
+    "name": "GUARANTY TRUST BANK",
+    "code": "058"
+  }
+}
+```
 
-***
+## To-do
 
-# Editing this README
+- List of banks to be implemented such that it's never out-of-date. It's currently an in-memory list defined within the source code. It's better to fetch this list from a reliable and always up-to-date source of Nigerian bank information on application start. [This repo](https://github.com/tomiiide/nigerian-banks/blob/master/banks.json) seems like a good start.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+- Build an SPA which offers the following features:
 
-## Suggestions for a good README
+  - Generate a valid account number for any Nigerian bank
+  - Give me the first 9-digits of your NUBAN and I'll tell you your name 👻👻👻
+  - Upload a list of NUBAN + bank codes for validation
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+    | Account number | Bank Code | Valid |
+    | -------------- | --------- | ----- |
+    | 0010020030     | 001       | Yes   |
+    | 0010020030     | 005       | Yes   |
+    | 0010020030     | 050       | No    |
+    | 0010020030     | 061       | Yes   |
 
-## Name
-Choose a self-explaining name for your project.
+- Enhance the 'Generate Bank Account' endpoint to generate a serial number itself and return the corresponding NUBAN when the request body is empty or does not contain a valid `serialNumber`.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+- Write unit tests. I think a good unit test would be to run at least, 10,000 real bank accounts (`{ accountNumber, bankCode }`) from various banks in Nigeria through the code and verify that for each account, the list of banks returned contains the actual bank.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+- Deploy the application to a free Heroku container.
