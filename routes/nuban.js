@@ -91,13 +91,13 @@ module.exports = {
       let checkDigit = 10 - sum;
 
       // Step 4. If your result is 10, then use 0 as your check digit
-      checkDigit = checkDigit == 10 ? 0 : checkDigit;
+      checkDigit = checkDigit === 10 ? 0 : checkDigit;
 
       return checkDigit;
     };
 
     const isBankAccountValid = (accountNumber, bankCode) => {
-      if (!accountNumber || !accountNumber.length == nubanLength) {
+      if (!accountNumber || !accountNumber.length === nubanLength) {
         error = "NUBAN must be %s digits long" % nubanLength;
         return false;
       }
@@ -108,7 +108,7 @@ module.exports = {
       return checkDigit == accountNumber[9];
     };
 
-    async function makeRequest(accountNo) {
+    function makeRequest(accountNo) {
       try {
         let accountNumber = accountNo;
         banks.forEach((item, index) => {
@@ -187,11 +187,15 @@ module.exports = {
 
       response = `CON What would you like to check
         1. My Account Status`;
-    } else if (text && text == "1") {
+    } else if (text && text === "1") {
       response = "CON Input your Account number";
-    } else if (text && text.startsWith("1*") && selectedBank != "") {
+    } else if (text && text.startsWith("1*") && selectedBank !== "") {
       const selectedOption = parseInt(text.split("*")[3]);
-      if (!isNaN(selectedOption) && selectedOption > 0 && selectedOption == 1) {
+      if (
+        !isNaN(selectedOption) &&
+        selectedOption > 0 &&
+        selectedOption === 1
+      ) {
         const inputDate = `${result[0]}`;
         const selectedPeriod = parseMonthAndYear(inputDate);
         const postData = {
@@ -224,7 +228,7 @@ module.exports = {
       } else if (
         !isNaN(selectedOption) &&
         selectedOption > 0 &&
-        selectedOption == 2
+        selectedOption === 2
       ) {
         const inputDate = `${result[1]}`;
         const selectedPeriod = parseMonthAndYear(inputDate);
@@ -258,7 +262,7 @@ module.exports = {
       } else if (
         !isNaN(selectedOption) &&
         selectedOption > 0 &&
-        selectedOption == 3
+        selectedOption === 3
       ) {
         const inputDate = `${result[2]}`;
         selectedPeriod = parseMonthAndYear(inputDate);
