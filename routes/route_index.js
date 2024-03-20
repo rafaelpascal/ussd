@@ -1,4 +1,4 @@
-var nubanUtil = require("./nuban");
+const nubanUtil = require("./nuban");
 
 module.exports = function (server) {
   server.get("/", (req, res, next) => {

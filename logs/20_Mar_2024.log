@@ -74,3 +74,251 @@
     }
   }
 }
+2024-03-20T12:49:22.348Z - info: 
+{
+  "On": "Wed Mar 20 2024:1:49:21 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "u98rqoeiuqwe09reroeiu89rwuoi09",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "response": {
+    "message": "Successfully",
+    "data": {
+      "_id": "65d756669c785af85ef92c92",
+      "name": "Kenechukwu Josiah",
+      "grade": "002",
+      "step": "2",
+      "designation": "House of works",
+      "cadre": "card",
+      "department": "Department",
+      "mda": "dempartment",
+      "month": "2",
+      "year": "2024",
+      "salaryStructure": "salaryStructure",
+      "verificationCode": "V-code",
+      "accountNumber": "6161668654",
+      "bankName": "FIDELITY BANK",
+      "employmentNumber": "9292828882",
+      "basicSalary": "20000",
+      "totalAllowance": "4000",
+      "allowanceDetails": "Transport allowance",
+      "gross": "25000",
+      "totalDeduction": "2009",
+      "deductionDetails": "tax and pension",
+      "staffType": "civils",
+      "net": "27000",
+      "overPayment": "0",
+      "__v": 0,
+      "createdAt": "2024-02-22T14:12:54.394Z",
+      "updatedAt": "2024-02-22T14:14:30.538Z",
+      "paymentReason": "Payment Failed",
+      "paymentStatus": "06"
+    }
+  }
+}
+2024-03-20T12:49:28.320Z - info: 
+{
+  "On": "Wed Mar 20 2024:1:49:27 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "u98rqoeiuqwe09reroeiu89rwuoi09",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "response": {
+    "message": "Successfully",
+    "data": {
+      "_id": "65d756669c785af85ef92c92",
+      "name": "Kenechukwu Josiah",
+      "grade": "002",
+      "step": "2",
+      "designation": "House of works",
+      "cadre": "card",
+      "department": "Department",
+      "mda": "dempartment",
+      "month": "2",
+      "year": "2024",
+      "salaryStructure": "salaryStructure",
+      "verificationCode": "V-code",
+      "accountNumber": "6161668654",
+      "bankName": "FIDELITY BANK",
+      "employmentNumber": "9292828882",
+      "basicSalary": "20000",
+      "totalAllowance": "4000",
+      "allowanceDetails": "Transport allowance",
+      "gross": "25000",
+      "totalDeduction": "2009",
+      "deductionDetails": "tax and pension",
+      "staffType": "civils",
+      "net": "27000",
+      "overPayment": "0",
+      "__v": 0,
+      "createdAt": "2024-02-22T14:12:54.394Z",
+      "updatedAt": "2024-02-22T14:14:30.538Z",
+      "paymentReason": "Payment Failed",
+      "paymentStatus": "06"
+    }
+  }
+}
+2024-03-20T12:49:34.128Z - info: 
+{
+  "On": "Wed Mar 20 2024:1:49:33 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "u98rqoeiuqwe09reroeiu89rwuoi09",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "response": {
+    "message": "Successfully",
+    "data": {
+      "_id": "65d756669c785af85ef92c92",
+      "name": "Kenechukwu Josiah",
+      "grade": "002",
+      "step": "2",
+      "designation": "House of works",
+      "cadre": "card",
+      "department": "Department",
+      "mda": "dempartment",
+      "month": "2",
+      "year": "2024",
+      "salaryStructure": "salaryStructure",
+      "verificationCode": "V-code",
+      "accountNumber": "6161668654",
+      "bankName": "FIDELITY BANK",
+      "employmentNumber": "9292828882",
+      "basicSalary": "20000",
+      "totalAllowance": "4000",
+      "allowanceDetails": "Transport allowance",
+      "gross": "25000",
+      "totalDeduction": "2009",
+      "deductionDetails": "tax and pension",
+      "staffType": "civils",
+      "net": "27000",
+      "overPayment": "0",
+      "__v": 0,
+      "createdAt": "2024-02-22T14:12:54.394Z",
+      "updatedAt": "2024-02-22T14:14:30.538Z",
+      "paymentReason": "Payment Failed",
+      "paymentStatus": "06"
+    }
+  }
+}
+2024-03-20T12:49:42.040Z - info: 
+{
+  "On": "Wed Mar 20 2024:1:49:41 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "u98rqoeiuqwe09reroeiu89rwuoi09",
+  "Payload": {
+    "month": "1",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-03-20T12:50:14.162Z - info: 
+{
+  "On": "Wed Mar 20 2024:1:50:13 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "u98rqoeiuqwe09reroeiu89rwuoi09",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "61616686543"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-03-20T12:57:45.215Z - info: 
+{
+  "On": "Wed Mar 20 2024:1:57:43 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "u98rqoeiuqwe09reroeiu89rwuoi09",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "61616686543"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-03-20T12:58:30.019Z - info: 
+{
+  "On": "Wed Mar 20 2024:1:58:29 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "u98rqoeiuqwe09reroeiu89rwuoi09",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "response": {
+    "message": "Successfully",
+    "data": {
+      "_id": "65d756669c785af85ef92c92",
+      "name": "Kenechukwu Josiah",
+      "grade": "002",
+      "step": "2",
+      "designation": "House of works",
+      "cadre": "card",
+      "department": "Department",
+      "mda": "dempartment",
+      "month": "2",
+      "year": "2024",
+      "salaryStructure": "salaryStructure",
+      "verificationCode": "V-code",
+      "accountNumber": "6161668654",
+      "bankName": "FIDELITY BANK",
+      "employmentNumber": "9292828882",
+      "basicSalary": "20000",
+      "totalAllowance": "4000",
+      "allowanceDetails": "Transport allowance",
+      "gross": "25000",
+      "totalDeduction": "2009",
+      "deductionDetails": "tax and pension",
+      "staffType": "civils",
+      "net": "27000",
+      "overPayment": "0",
+      "__v": 0,
+      "createdAt": "2024-02-22T14:12:54.394Z",
+      "updatedAt": "2024-02-22T14:14:30.538Z",
+      "paymentReason": "Payment Failed",
+      "paymentStatus": "06"
+    }
+  }
+}
+2024-03-20T12:58:50.283Z - info: 
+{
+  "On": "Wed Mar 20 2024:1:58:49 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "u98rqoeiuqwe09reroeiu89rwuoi09",
+  "Payload": {
+    "month": "1",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
