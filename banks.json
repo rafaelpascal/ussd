@@ -1,0 +1,1122 @@
+[
+  {
+    "code": "779",
+    "name": "9 PAYMENT SERVICE BANK"
+  },
+  {
+    "code": "044",
+    "name": "ACCESS BANK PLC"
+  },
+  {
+    "code": "565",
+    "name": "CARBON BANK"
+  },
+  {
+    "code": "559",
+    "name": "Coronation Merchant Bank"
+  },
+  {
+    "code": "063",
+    "name": "DIAMOND BANK PLC"
+  },
+  {
+    "code": "050",
+    "name": "ECOBANK NIGERIA PLC"
+  },
+  {
+    "code": "098",
+    "name": "EKONDO MFB"
+  },
+  {
+    "code": "084",
+    "name": "ENTERPRISE BANK PLC"
+  },
+  {
+    "code": "560",
+    "name": "FBNQuest Merchant Bank"
+  },
+  {
+    "code": "070",
+    "name": "FIDELITY BANK"
+  },
+  {
+    "code": "011",
+    "name": "FIRST BANK OF NIGERIA PLC"
+  },
+  {
+    "code": "214",
+    "name": "FIRST CITY MONUMENT BANK PLC"
+  },
+  {
+    "code": "501",
+    "name": "FSDH MERCHANT BANK LTD"
+  },
+  {
+    "code": "697",
+    "name": "GLOBUS BANK"
+  },
+  {
+    "code": "103",
+    "name": "GLOBUS BANK LIMITED"
+  },
+  {
+    "code": "058",
+    "name": "GUARANTY TRUST BANK PLC"
+  },
+  {
+    "code": "030",
+    "name": "HERITAGE BANK LIMITED"
+  },
+  {
+    "code": "301",
+    "name": "JAIZ BANK PLC"
+  },
+  {
+    "code": "082",
+    "name": "KEYSTONE BANK PLC"
+  },
+  {
+    "code": "303",
+    "name": "LOTUS BANK"
+  },
+  {
+    "code": "014",
+    "name": "MAINSTREET BANK PLC"
+  },
+  {
+    "code": "319",
+    "name": "MAYFRESH MORTGAGE"
+  },
+  {
+    "code": "326",
+    "name": "MONARCH MFB ISW"
+  },
+  {
+    "code": "328",
+    "name": "NDIAGU MFB ISW"
+  },
+  {
+    "code": "950",
+    "name": "NEW PRUDENTIAL BANK"
+  },
+  {
+    "code": "659",
+    "name": "NIRSAL NATIONAL MICROFINANCE"
+  },
+  {
+    "code": "561",
+    "name": "NOVA MERCHANT BANK LIMITED"
+  },
+  {
+    "code": "327",
+    "name": "OKWUOHA MFB ISW"
+  },
+  {
+    "code": "305",
+    "name": "OPAY"
+  },
+  {
+    "code": "076",
+    "name": "POLARIS BANK PLC"
+  },
+  {
+    "code": "320",
+    "name": "POLYUNWANA MICROFINANCE  BANK"
+  },
+  {
+    "code": "101",
+    "name": "PROVIDUS BANK"
+  },
+  {
+    "code": "106",
+    "name": "SIGNATURE BANK"
+  },
+  {
+    "code": "221",
+    "name": "STANBIC-IBTC BANK PLC"
+  },
+  {
+    "code": "068",
+    "name": "STANDARD CHARTERED BANK NIGERIA LTD"
+  },
+  {
+    "code": "232",
+    "name": "STERLING BANK PLC"
+  },
+  {
+    "code": "100",
+    "name": "SUNTRUST BANK"
+  },
+  {
+    "code": "302",
+    "name": "TAJ BANK"
+  },
+  {
+    "code": "102",
+    "name": "TITAN TRUST BANK LIMITED"
+  },
+  {
+    "code": "090510",
+    "name": "UMUNNACHI MFB EBONYI STATE COMMERCIAL"
+  },
+  {
+    "code": "095",
+    "name": "UNICAL MFB"
+  },
+  {
+    "code": "032",
+    "name": "UNION BANK OF NIGERIA PLC"
+  },
+  {
+    "code": "033",
+    "name": "UNITED BANK FOR AFRICA PLC"
+  },
+  {
+    "code": "215",
+    "name": "UNITY BANK PLC"
+  },
+  {
+    "code": "566",
+    "name": "VFD MICROFINANCE BANK"
+  },
+  {
+    "code": "035",
+    "name": "WEMA BANK PLC"
+  },
+  {
+    "code": "057",
+    "name": "ZENITH BANK PLC"
+  },
+  {
+    "code": "22959512",
+    "name": "ABAGANA MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "24091230",
+    "name": "ABATETE  MICROFINANCE BANK LTD"
+  },
+  {
+    "code": "47559347",
+    "name": "ABIGI MICROFINANCE BANK"
+  },
+  {
+    "code": "21621319",
+    "name": "ACHINA MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "80051956",
+    "name": "ADAMAWA HOMES SAVING"
+  },
+  {
+    "code": "22676937",
+    "name": "ADAZI-ANI MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "95871456",
+    "name": "AGOSASA MICROFINANCE BANK"
+  },
+  {
+    "code": "23890484",
+    "name": "AGULERI MICRO FINANCE BANK"
+  },
+  {
+    "code": "79750419",
+    "name": "AIYEPE MICROFINANCE BANK"
+  },
+  {
+    "code": "10971916",
+    "name": "AJOSE MICROFINANCE BANK"
+  },
+  {
+    "code": "21730601",
+    "name": "AKALABOR MICRO FINANCE BANK LTD, AMESI"
+  },
+  {
+    "code": "21895473",
+    "name": "AKPO MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "30618075",
+    "name": "AKU DIEWA MFB"
+  },
+  {
+    "code": "21980627",
+    "name": "AKUOMA MICRO FINANCE BANK, ONITSHA"
+  },
+  {
+    "code": "M61300636",
+    "name": "AL-HAYAT MFB OGUN"
+  },
+  {
+    "code": "55949827",
+    "name": "ALEKUN MICROFINANCE BANK"
+  },
+  {
+    "code": "21024975",
+    "name": "ALHOCOL MICRO FINANCE BANK"
+  },
+  {
+    "code": "M88827413",
+    "name": "ALLWORKERS MFB LTD IMO STATE"
+  },
+  {
+    "code": "22544861",
+    "name": "ALOR MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "22085107",
+    "name": "AMESI MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "16510614",
+    "name": "APPLE MICROFINANCE BANK"
+  },
+  {
+    "code": "98668634",
+    "name": "Appmart mfb"
+  },
+  {
+    "code": "77447187",
+    "name": "APPMART MICRO FINANCE BANK"
+  },
+  {
+    "code": "33336538",
+    "name": "ARIS MFB"
+  },
+  {
+    "code": "44402427",
+    "name": "ASTRA POLARIS MICROFINANCE BANK"
+  },
+  {
+    "code": "23112386",
+    "name": "AWGBU MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "21199571",
+    "name": "AWKA MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "19644902",
+    "name": "AWKUZU MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "29372524",
+    "name": "BANK OF AGRIC, DANBATTA"
+  },
+  {
+    "code": "33062682",
+    "name": "BANK OF AGRICULTURE (BOA) OJI-RIVER"
+  },
+  {
+    "code": "18389352",
+    "name": "BANK OF AGRICULTURE LTD ISUOCHI"
+  },
+  {
+    "code": "74456604",
+    "name": "BANK OF AGRICULTURE LTD UMUAHIA"
+  },
+  {
+    "code": "45350309",
+    "name": "BANK OF AGRICULTURE ZAMFARA"
+  },
+  {
+    "code": "30709915",
+    "name": "BETHEL MFB"
+  },
+  {
+    "code": "79278357",
+    "name": "BIC MFB BAUCHI"
+  },
+  {
+    "code": "26007669",
+    "name": "BICHI MFB"
+  },
+  {
+    "code": "14722318",
+    "name": "BIYAMA"
+  },
+  {
+    "code": "96675918",
+    "name": "BOA AZARE"
+  },
+  {
+    "code": "73085273",
+    "name": "BOA BAUCHI"
+  },
+  {
+    "code": "29400088",
+    "name": "BOA TUNDUN WADA BRANCH"
+  },
+  {
+    "code": "29206727",
+    "name": "BOMPAI MICROFINANCE BANK LIMITED"
+  },
+  {
+    "code": "52269191",
+    "name": "BONGHE MICRO FIN"
+  },
+  {
+    "code": "43472719",
+    "name": "BUNGUDU MFB ZAMFARA"
+  },
+  {
+    "code": "23903491",
+    "name": "CASH PAYMENT"
+  },
+  {
+    "code": "19704748",
+    "name": "CASTLE  MICROFINANCE BANK LTD, OZUBULU"
+  },
+  {
+    "code": "82034598",
+    "name": "CATLAND MICROFINANCE BANK"
+  },
+  {
+    "code": "89672092",
+    "name": "CFA MFB BAUCHI"
+  },
+  {
+    "code": "34542268",
+    "name": "CHERISH MICRO FINANCE BANK"
+  },
+  {
+    "code": "30867969",
+    "name": "CHIDERA MFB"
+  },
+  {
+    "code": "30983374",
+    "name": "COAL CAMP MFB"
+  },
+  {
+    "code": "25093323",
+    "name": "DALA BUILDING SOCIETY BANK"
+  },
+  {
+    "code": "25195194",
+    "name": "DANBATTA MICRO-FINANCE BANK"
+  },
+  {
+    "code": "31035574",
+    "name": "DEC MFB"
+  },
+  {
+    "code": "31141840",
+    "name": "DESTINY MFB"
+  },
+  {
+    "code": "26357536",
+    "name": "DIRECTORATE OF YOUTH DEVELOPMENT"
+  },
+  {
+    "code": "20247631",
+    "name": "DOMINION MICROFINANCE BANK, IHEMBOSI"
+  },
+  {
+    "code": "99124369",
+    "name": "E SO E MICROFINANCE BANK"
+  },
+  {
+    "code": "31255011",
+    "name": "EASTMAN MFB"
+  },
+  {
+    "code": "20608102",
+    "name": "EJIAMATU MICRO FINANCE BANK, OJOTO"
+  },
+  {
+    "code": "41783663",
+    "name": "EKUOMBE MICROFINANCE BANK"
+  },
+  {
+    "code": "18554612",
+    "name": "EKWULOBIA MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "19270778",
+    "name": "ENUGWU-UKWU MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "23623965",
+    "name": "EQUINOX MICRO FINANCE BANK"
+  },
+  {
+    "code": "20955668",
+    "name": "EZEBO MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "81122395",
+    "name": "FIRST BANK MFB"
+  },
+  {
+    "code": "91108240",
+    "name": "FORESIGHT MICROFINANCE BANK"
+  },
+  {
+    "code": "95519257",
+    "name": "FUFORE MICRO FIN"
+  },
+  {
+    "code": "65666074",
+    "name": "GAMAWA MFB"
+  },
+  {
+    "code": "94289926",
+    "name": "GATEWAY SAVINGS AND LOANS LTD"
+  },
+  {
+    "code": "67214148",
+    "name": "GIREI MFB POLARIS ADAMAWA"
+  },
+  {
+    "code": "33742421",
+    "name": "GOBARAU MICRO FINANCE BANK"
+  },
+  {
+    "code": "33764167",
+    "name": "GOBARAU MICRO FINANCE BANK"
+  },
+  {
+    "code": "31484722",
+    "name": "GOLDEN FUNDS MFB"
+  },
+  {
+    "code": "32919899",
+    "name": "GOOD SHEPHERD MICROFINANCE BANK"
+  },
+  {
+    "code": "26483517",
+    "name": "GOVERNMENT HOUSE"
+  },
+  {
+    "code": "25280390",
+    "name": "GRASS ROOT MICRO-FINANCE BANK"
+  },
+  {
+    "code": "31567355",
+    "name": "GREEN BANK MFB"
+  },
+  {
+    "code": "60783188",
+    "name": "GUDUSISA MFB"
+  },
+  {
+    "code": "24905743",
+    "name": "GWARZO MICRO-FINANCE BANK"
+  },
+  {
+    "code": "26520466",
+    "name": "H.S.M.B. HEADQUARTER"
+  },
+  {
+    "code": "93498030",
+    "name": "HAMADA MFB KATSINA"
+  },
+  {
+    "code": "33880353",
+    "name": "HINACHE MICRO FINANCE BANK"
+  },
+  {
+    "code": "26622751",
+    "name": "HISTRORY AND CULTURE BUREAU"
+  },
+  {
+    "code": "22438472",
+    "name": "IDEMILI MICRO FINANCE BANK, NNOBI"
+  },
+  {
+    "code": "31639301",
+    "name": "IFEANYICHUKWU MFB"
+  },
+  {
+    "code": "21204656",
+    "name": "IGBOUKWU MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "19953551",
+    "name": "IHIALA MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "84166448",
+    "name": "IJEBU IFE MICROFINANCE BANK"
+  },
+  {
+    "code": "87884143",
+    "name": "IKENNE MICROFINANCE BANK"
+  },
+  {
+    "code": "42655598",
+    "name": "ILISAN MICROFINANCE BANK"
+  },
+  {
+    "code": "56899565",
+    "name": "IMODI-IMOSAN MICROFINANCE BANK"
+  },
+  {
+    "code": "14118791",
+    "name": "IMOWO MICROFINANCE BANK"
+  },
+  {
+    "code": "52810753",
+    "name": "INTERLAND MICROFINANCE BANK"
+  },
+  {
+    "code": "62750117",
+    "name": "IPERU MICROFINANCE BANK"
+  },
+  {
+    "code": "37839973",
+    "name": "ISHIAGU MICRO-FINANCE BANK"
+  },
+  {
+    "code": "31714454",
+    "name": "ISI-UZO MFB"
+  },
+  {
+    "code": "41345634",
+    "name": "IWADE MICROFINANCE BANK"
+  },
+  {
+    "code": "58642300",
+    "name": "JANUELA AND SONS MFB"
+  },
+  {
+    "code": "63698957",
+    "name": "JEN MICRO FINANCEBANK TARABA"
+  },
+  {
+    "code": "25779395",
+    "name": "KABO MICRO FINANCE BANK"
+  },
+  {
+    "code": "26724289",
+    "name": "KANO STATE CENSORSHIP BOARD"
+  },
+  {
+    "code": "26899372",
+    "name": "KANO STATE COMPUTER CENTER"
+  },
+  {
+    "code": "26923279",
+    "name": "KANO STATE LIBRARY"
+  },
+  {
+    "code": "27020506",
+    "name": "KANO STATE MINISTRY OF COMMERCE"
+  },
+  {
+    "code": "27189309",
+    "name": "KANO STATE RELIEF AND REHAB. AGENCY"
+  },
+  {
+    "code": "25490846",
+    "name": "KANO WEST MICRO-FINANCE BANK"
+  },
+  {
+    "code": "27244648",
+    "name": "KANO ZOOLOGICAL GARDEN"
+  },
+  {
+    "code": "27321100",
+    "name": "KASCO"
+  },
+  {
+    "code": "18004881",
+    "name": "KATAGUM MFB"
+  },
+  {
+    "code": "31821858",
+    "name": "KENECHUKWU MFB"
+  },
+  {
+    "code": "25513284",
+    "name": "KMC MICRO-FINANCE BANK"
+  },
+  {
+    "code": "26181770",
+    "name": "KUSALLA MFB"
+  },
+  {
+    "code": "68265919",
+    "name": "KWATASHI MFB PENSION ZAMFARA"
+  },
+  {
+    "code": "98433268",
+    "name": "KWATASHI MFB ZAMFARA"
+  },
+  {
+    "code": "36326798",
+    "name": "LAVENDER MICROFINANCE BANK"
+  },
+  {
+    "code": "27447937",
+    "name": "LAW REFORM COMMISSION"
+  },
+  {
+    "code": "25901550",
+    "name": "MADOBI MFB"
+  },
+  {
+    "code": "26244253",
+    "name": "MAKODA MFB"
+  },
+  {
+    "code": "86672507",
+    "name": "MAY FRESH MFB ABAKILIKI"
+  },
+  {
+    "code": "33486109",
+    "name": "MAYFRESH MORTGAGE BANK LTD ENUGU"
+  },
+  {
+    "code": "66551835",
+    "name": "MAYFRESH MORTGAGE BANK LTD IMO STATE"
+  },
+  {
+    "code": "98248704",
+    "name": "MAYFRESH MORTGAGE BANK UMUAHIA"
+  },
+  {
+    "code": "20007684",
+    "name": "MAYFRESH SAVINGS AND LOAN"
+  },
+  {
+    "code": "99522389",
+    "name": "MICROVIS MFB LTD TARABA"
+  },
+  {
+    "code": "23774566",
+    "name": "MODEL MICROFINANCE BANK, NNENI"
+  },
+  {
+    "code": "60819534",
+    "name": "MOLUSI MICROFINANCE BANK"
+  },
+  {
+    "code": "98861741",
+    "name": "MONARCH MFB EBONYI LG"
+  },
+  {
+    "code": "57276931",
+    "name": "MONARCH MICRO FINANCE BANK EBONYI STATE"
+  },
+  {
+    "code": "83497186",
+    "name": "NACRDB MICHIKA FIRST BANK"
+  },
+  {
+    "code": "15765558",
+    "name": "NACRDB ZENITH MUBI"
+  },
+  {
+    "code": "62134284",
+    "name": "NAMODA MFB ZAMFARA"
+  },
+  {
+    "code": "96453599",
+    "name": "NARCDB GANYE"
+  },
+  {
+    "code": "80650550",
+    "name": "NARCDB YOLA"
+  },
+  {
+    "code": "37249997",
+    "name": "NDIAGU MICRO-FINANCE BANK"
+  },
+  {
+    "code": "18671335",
+    "name": "NDIOLU MICRO FINANCE BANK, AWKA"
+  },
+  {
+    "code": "18865111",
+    "name": "NDIORA MICRO FINANCE BANK"
+  },
+  {
+    "code": "78282314",
+    "name": "NGBO MICRO-FINANCE BANK EBONYI STATE"
+  },
+  {
+    "code": "19543186",
+    "name": "NIBO MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "19421061",
+    "name": "NICE MICRO FINANCE BANK"
+  },
+  {
+    "code": "20303886",
+    "name": "NIG AGRIC COOP AND DEV BANK, AWKA"
+  },
+  {
+    "code": "20498445",
+    "name": "NIG AGRIC COOP AND DEV BANK, IHIALA"
+  },
+  {
+    "code": "23437018",
+    "name": "NIG AGRIC COOP AND DEV BANK, NTEJE"
+  },
+  {
+    "code": "19186040",
+    "name": "NIG AGRIC COOP AND DEV BANK, UKPO"
+  },
+  {
+    "code": "49090455",
+    "name": "NIG AGRIC COOP AND DEV BANK KATSINA"
+  },
+  {
+    "code": "41452070",
+    "name": "NIG POLICE MICRO FIN_ADAMAWA STATE"
+  },
+  {
+    "code": "25348331",
+    "name": "NIG. AGRIC AND COOPS. BANK KANO"
+  },
+  {
+    "code": "37657462",
+    "name": "NIGERIA AGRIC BANK(NACRD - ABAKALIKI)"
+  },
+  {
+    "code": "37561637",
+    "name": "NIGERIA AGRIC BANK(NACRD - AFIKPO)"
+  },
+  {
+    "code": "78994095",
+    "name": "NINGI MFB"
+  },
+  {
+    "code": "18771856",
+    "name": "NKPOR MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "22391724",
+    "name": "NNOBI MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "24436891",
+    "name": "NO BANK"
+  },
+  {
+    "code": "24856420",
+    "name": "NORTH BRIDGE MICRO-FINANCE BANK"
+  },
+  {
+    "code": "34390795",
+    "name": "NORTH CAPITAL MICRO FINANCE BANK"
+  },
+  {
+    "code": "62988614",
+    "name": "NPF MFB"
+  },
+  {
+    "code": "22705010",
+    "name": "NRI MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "32010347",
+    "name": "NSUKKA TOWNSHIP MFB"
+  },
+  {
+    "code": "55445521",
+    "name": "NWANNEGADI MFB"
+  },
+  {
+    "code": "20710158",
+    "name": "OBA MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "18491365",
+    "name": "OBELEDU MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "32138129",
+    "name": "OBOLLO-AFOR MFB"
+  },
+  {
+    "code": "19038276",
+    "name": "OBOSI MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "94674354",
+    "name": "OCCON SUCCESS MICROFINANCE BANK"
+  },
+  {
+    "code": "28679776",
+    "name": "OFFICE OF THE AUDITOR GENERAL"
+  },
+  {
+    "code": "28735706",
+    "name": "OFFICE OF THE HEAD OF SERVICE"
+  },
+  {
+    "code": "32219121",
+    "name": "OGBETE MFB"
+  },
+  {
+    "code": "18905227",
+    "name": "OGIDI MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "M32301619",
+    "name": "OGIGE MFB"
+  },
+  {
+    "code": "45977954",
+    "name": "Ogun Bank of Agriculture Abeokuta"
+  },
+  {
+    "code": "70438275",
+    "name": "Ogun Bank of Agriculture Imeko"
+  },
+  {
+    "code": "49561031",
+    "name": "Ogun Bank of Agriculture, Ago-iwoye"
+  },
+  {
+    "code": "67069035",
+    "name": "Ogun Boromu Microfinance Bank Ltd"
+  },
+  {
+    "code": "84484333",
+    "name": "Ogun Honey microfinance Bank"
+  },
+  {
+    "code": "17492821",
+    "name": "Ogun Unaab Microfinance Bank"
+  },
+  {
+    "code": "44643822",
+    "name": "OGUN WESTEND MFB LTD"
+  },
+  {
+    "code": "32449743",
+    "name": "OHA MFB"
+  },
+  {
+    "code": "39642430",
+    "name": "OHAFIA MICROFINANCE BANK PLC ABIA STATE"
+  },
+  {
+    "code": "82803550",
+    "name": "OHHA MFB ABIA"
+  },
+  {
+    "code": "46846557",
+    "name": "OKWUOHA MICRO FINANCE BANK"
+  },
+  {
+    "code": "15095075",
+    "name": "OMUMA MICROFINANCE BANK IMO STATE"
+  },
+  {
+    "code": "22218633",
+    "name": "ORAUKWU MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "13936866",
+    "name": "ORISUN MICROFINANCE BANK"
+  },
+  {
+    "code": "57398228",
+    "name": "OZIZA MFB EBONYI STATE"
+  },
+  {
+    "code": "37321609",
+    "name": "OZIZA MICRO-FINANCE BANK"
+  },
+  {
+    "code": "20832165",
+    "name": "OZUBULU MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "28833778",
+    "name": "PILGRIMS WELFARE BOARD"
+  },
+  {
+    "code": "25606686",
+    "name": "POLICE MICRO-FINANCE BANK"
+  },
+  {
+    "code": "38021291",
+    "name": "POLYUNWANA MFB"
+  },
+  {
+    "code": "25825157",
+    "name": "RAKIB MICRO FINANCE NIG. LTD"
+  },
+  {
+    "code": "57970568",
+    "name": "RIVERSIDE MICROFINANCE BANK"
+  },
+  {
+    "code": "96279935",
+    "name": "SAGAMU MICROFINANCE BANK"
+  },
+  {
+    "code": "91260266",
+    "name": "SAPIDA MICROFINANCE BANK"
+  },
+  {
+    "code": "28989027",
+    "name": "SCHOOL OF BASIC MIDWIFERY, DBT"
+  },
+  {
+    "code": "90433883",
+    "name": "SOLID ROCK MICROFINANCE BANK"
+  },
+  {
+    "code": "77618107",
+    "name": "SOROMAN MICRO FINANCE BANK BAUCHI"
+  },
+  {
+    "code": "29065309",
+    "name": "SRCOE"
+  },
+  {
+    "code": "52776572",
+    "name": "STANDARD MICRO FINAN"
+  },
+  {
+    "code": "36062604",
+    "name": "TARABA MICRO FINANCE BANK"
+  },
+  {
+    "code": "35985036",
+    "name": "TARABA SAVINGS AND LOAN"
+  },
+  {
+    "code": "15371707",
+    "name": "TARABA SAVINGS AND LOAN  TARABA"
+  },
+  {
+    "code": "20554178",
+    "name": "TOP CLASS MICRO FINANCE BANK, ONITSHA"
+  },
+  {
+    "code": "91427313",
+    "name": "TRUST MICROFINANCE BANK"
+  },
+  {
+    "code": "21391215",
+    "name": "UGA MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "19895572",
+    "name": "UKPOR MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "20167317",
+    "name": "ULI MICROFINANCE BANK LTD"
+  },
+  {
+    "code": "67475995",
+    "name": "UMMAH MICRO FINANCE_ADAMAWA"
+  },
+  {
+    "code": "22834793",
+    "name": "UMMUNE MICRO FINANCE, NIMO"
+  },
+  {
+    "code": "32515908",
+    "name": "UMUCHINEMERE MFB"
+  },
+  {
+    "code": "13778693",
+    "name": "UMUNNACHI MFB EBONYI STATE"
+  },
+  {
+    "code": "13700270",
+    "name": "UMUNNACHI MFB EBONYI STATE"
+  },
+  {
+    "code": "68381411",
+    "name": "UMUNNACHI MFB EBONYI STATE_UBA"
+  },
+  {
+    "code": "85623431",
+    "name": "UMUNNACHI MFB EBONYI STATE_UNION"
+  },
+  {
+    "code": "37797678",
+    "name": "UMUNNACHI MICRO-FINANCE BANK"
+  },
+  {
+    "code": "23384653",
+    "name": "UMUNYA MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "19334678",
+    "name": "UMUNZE MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "23519186",
+    "name": "UMUOJI MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "34456890",
+    "name": "UMYU MICRO FINANCE BANK"
+  },
+  {
+    "code": "24399714",
+    "name": "UNKONWN BANK"
+  },
+  {
+    "code": "32749445",
+    "name": "UNN MFB ENU"
+  },
+  {
+    "code": "33245728",
+    "name": "UNN MFB NSK"
+  },
+  {
+    "code": "32832851",
+    "name": "URBAN MFB"
+  },
+  {
+    "code": "23061459",
+    "name": "UTUH MICRO FINANCE BANK LTD"
+  },
+  {
+    "code": "97708735",
+    "name": "UVOMA MFB ABIA STATE"
+  },
+  {
+    "code": "24649848",
+    "name": "WOMEN DEVELOPMENT MICRO-FINANCE BANK"
+  },
+  {
+    "code": "24797437",
+    "name": "WUDIL MICRO-FINANCE BANK"
+  },
+  {
+    "code": "29148005",
+    "name": "WUDIL MICROFINANCE BANK PENSION"
+  },
+  {
+    "code": "85197507",
+    "name": "YANKARI AZARE MFB"
+  },
+  {
+    "code": "59611502",
+    "name": "YANKARI BAUCH MFB"
+  },
+  {
+    "code": "61953748",
+    "name": "ZAMFARA BUNGUDU MICRO FINANCE BANK"
+  },
+  {
+    "code": "84317385",
+    "name": "ZAMFARA KWATASHI MICRO FINANCE BANK"
+  },
+  {
+    "code": "91792046",
+    "name": "ZAMFARA NAMODA MICRO FINANCE BANK"
+  },
+  {
+    "code": "78469687",
+    "name": "ZAMFARA NIG AGRIC COOP AND DEV BANK"
+  },
+  {
+    "code": "77711214",
+    "name": "ZAMFARA ZURMI MICRO FINANCE BANK"
+  }
+]
