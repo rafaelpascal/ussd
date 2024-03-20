@@ -145,7 +145,7 @@ module.exports = {
       response = `CON What would you like to check
         1. My Account Status`;
     } else if (text && text == "1") {
-      response = `CON Input your Account number`;
+      response = "CON Input your Account number";
     } else if (text && text.startsWith("1*") && selectedBank != "") {
       const selectedOption = parseInt(text.split("*")[3]);
       if (!isNaN(selectedOption) && selectedOption > 0 && selectedOption == 1) {
@@ -165,18 +165,18 @@ module.exports = {
         );
         if (periodRes.message === "Successfully") {
           if (periodRes.data.paymentStatus === "00") {
-            response = `END Payment is Successful`;
+            response = "END Payment is Successful";
           } else if (periodRes.data.paymentStatus === "10") {
-            response = `END Failed Nuban Validation`;
+            response = "END Failed Nuban Validation";
           } else if (periodRes.data.paymentStatus === "15") {
-            response = `END Payment Failed`;
+            response = "END Payment Failed";
           } else if (periodRes.data.paymentStatus === "06") {
-            response = `END Payment in Progress`;
+            response = "END Payment in Progress";
           } else {
-            response = `END Paymnet not found`;
+            response = "END Paymnet not found";
           }
         } else {
-          response = `END Payment not found`;
+          response = "END Payment not found";
         }
       } else if (
         !isNaN(selectedOption) &&
@@ -199,18 +199,18 @@ module.exports = {
         if (periodRes.message === "Successfully") {
           if (periodRes.data.paymentStatus === "00") {
             // response = `END ${JSON.stringify(periodRes.data, null, 2)}`;
-            response = `END Payment is Successful`;
+            response = "END Payment is Successful";
           } else if (periodRes.data.paymentStatus === "10") {
-            response = `END Failed Nuban Validation`;
+            response = "END Failed Nuban Validation";
           } else if (periodRes.data.paymentStatus === "15") {
-            response = `END Payment Failed`;
+            response = "END Payment Failed";
           } else if (periodRes.data.paymentStatus === "06") {
-            response = `END Payment in Progress`;
+            response = "END Payment in Progress";
           } else {
-            response = `END Paymnet not found`;
+            response = "END Paymnet not found";
           }
         } else {
-          response = `END Payment not found`;
+          response = "END Payment not found";
         }
       } else if (
         !isNaN(selectedOption) &&
@@ -234,21 +234,21 @@ module.exports = {
         if (periodRes.message === "Successfully") {
           if (periodRes.data.paymentStatus === "00") {
             // response = `END ${JSON.stringify(periodRes.data, null, 2)}`;
-            response = `END Payment is Successful`;
+            response = "END Payment is Successful";
           } else if (periodRes.data.paymentStatus === "10") {
-            response = `END Failed Nuban Validation`;
+            response = "END Failed Nuban Validation";
           } else if (periodRes.data.paymentStatus === "15") {
-            response = `END Payment Failed`;
+            response = "END Payment Failed";
           } else if (periodRes.data.paymentStatus === "06") {
-            response = `END Payment in Progress`;
+            response = "END Payment in Progress";
           } else {
-            response = `END Paymnet not found`;
+            response = "END Paymnet not found";
           }
         } else {
-          response = `END Payment not found`;
+          response = "END Payment not found";
         }
       } else {
-        response = `END Nothing Selected`;
+        response = "END Nothing Selected";
       }
     } else if (
       text &&
@@ -269,7 +269,7 @@ module.exports = {
         const ussdResponse = displayDatesAsText(result);
         response = `CON You selected: ${selectedBank} \n ${ussdResponse}`;
       } else {
-        response = `CON Invalid selection. Please enter a valid option.`;
+        response = "CON Invalid selection. Please enter a valid option.";
       }
     } else if (text && text.startsWith("1*")) {
       const userEnteredAccount = text.substring(2).trim();
@@ -288,10 +288,11 @@ module.exports = {
           const resultString = numberedItems.join("\n");
           response = `CON Select Your Bank : \n${resultString.trim()}`;
         } else {
-          response = `CON No banks found for the provided account number. Please enter a valid account number.`;
+          response =
+            "CON No banks found for the provided account number. Please enter a valid account number.";
         }
       } else {
-        response = `CON Invalid Account Number. Please enter a valid number.`;
+        response = "CON Invalid Account Number. Please enter a valid number.";
       }
     }
 
