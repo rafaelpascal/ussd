@@ -13,7 +13,7 @@ app.get("/ussd", (req, res) => {
   res.send("Appmart Ussd Payment status verification Is Running");
 });
 
-// Routes setup
+// Routes setupp
 app.use("/ussd", routeLink);
 
 app.listen(port, () => {
