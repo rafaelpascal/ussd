@@ -30,6 +30,7 @@ module.exports = {
       clientKey: process.env.CLIENT_KEY,
     };
 
+    // CALL EXTERNAL API
     async function makePostRequest(url, data, customHeaders) {
       try {
         const response = await axios.post(url, data, {
@@ -65,6 +66,7 @@ module.exports = {
       }
     }
 
+    // GENERATE CHECK DIGIT
     const generateCheckDigit = (serialNumber, bankCode) => {
       if (serialNumber.length > serialNumLength) {
         console.log(
@@ -76,7 +78,7 @@ module.exports = {
       }
 
       serialNumber = serialNumber.padStart(serialNumLength, "0");
-      let cipher = bankCode + serialNumber;
+      const cipher = bankCode + serialNumber;
       let sum = 0;
 
       // Step 1. Calculate A*3+B*7+C*3+D*3+E*7+F*3+G*3+H*7+I*3+J*3+K*7+L*3
@@ -95,22 +97,23 @@ module.exports = {
 
       return checkDigit;
     };
-
+    // IS BANK VALID
     const isBankAccountValid = (accountNumber, bankCode) => {
       if (!accountNumber || !accountNumber.length === nubanLength) {
         error = "NUBAN must be %s digits long" % nubanLength;
         return false;
       }
 
-      let serialNumber = accountNumber.substring(0, 9);
-      let checkDigit = generateCheckDigit(serialNumber, bankCode);
+      const serialNumber = accountNumber.substring(0, 9);
+      const checkDigit = generateCheckDigit(serialNumber, bankCode);
 
       return checkDigit == accountNumber[9];
     };
 
+    // REQUEST TO GET BANKS
     function makeRequest(accountNo) {
       try {
-        let accountNumber = accountNo;
+        const accountNumber = accountNo;
         banks.forEach((item, index) => {
           if (isBankAccountValid(accountNumber, item.code)) {
             accountBanks.push(item.name);
@@ -121,6 +124,7 @@ module.exports = {
       }
     }
 
+    // GET PREVIOUS MONTH
     function getPreviousMonths() {
       const currentDate = new Date();
       const previousMonths = [];
@@ -189,7 +193,7 @@ module.exports = {
         1. My Account Status`;
     } else if (text && text === "1") {
       response = "CON Input your Account number";
-    } else if (text && text.startsWith("1*") && selectedBank !== "") {
+    } else if (text?.startsWith("1*") && selectedBank !== "") {
       const selectedOption = parseInt(text.split("*")[3]);
       if (
         !isNaN(selectedOption) &&
@@ -298,8 +302,7 @@ module.exports = {
         response = "END Nothing Selected";
       }
     } else if (
-      text &&
-      text.startsWith("1*") &&
+      text?.startsWith("1*") &&
       NewaccountBanks.length > 0 &&
       !isNaN(account)
     ) {
@@ -318,14 +321,14 @@ module.exports = {
       } else {
         response = "CON Invalid selection. Please enter a valid option.";
       }
-    } else if (text && text.startsWith("1*")) {
+    } else if (text?.startsWith("1*")) {
       const userEnteredAccount = text.substring(2).trim();
 
       if (userEnteredAccount !== "" && !isNaN(userEnteredAccount)) {
         account = parseInt(userEnteredAccount);
 
         accountBanks = [];
-        await makeRequest(userEnteredAccount);
+        makeRequest(userEnteredAccount);
 
         if (accountBanks.length > 0) {
           NewaccountBanks.push([...accountBanks]);
@@ -347,5 +350,6 @@ module.exports = {
       "Content-Type": "text/plain",
     });
     res.send(response);
+    return true;
   },
 };
