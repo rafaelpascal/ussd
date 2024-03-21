@@ -174,7 +174,7 @@ module.exports = {
 
     // Check if the USSD session is new
     const isNewSession = text === "";
-    if (serviceCode !== "*379#") {
+    if (serviceCode !== "*714#") {
       return res.send("Invalid Service Code");
     }
 
