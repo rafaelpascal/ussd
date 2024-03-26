@@ -12,7 +12,7 @@ const serialNumLength = 9;
 let NewaccountBanks = [];
 let selectedBank = "";
 let selectedPeriod = {};
-let account = 0;
+let account = "";
 let result = "";
 
 module.exports = {
@@ -57,7 +57,8 @@ module.exports = {
           PhoneNumber: `${phoneNumber}`,
           SessionId: `${sessionId}`,
           Payload: data,
-          Error: error.response.data,
+          Error: error.response,
+          url: url,
         };
 
         // Log to File
@@ -69,9 +70,6 @@ module.exports = {
     // GENERATE CHECK DIGIT
     const generateCheckDigit = (serialNumber, bankCode) => {
       if (serialNumber.length > serialNumLength) {
-        console.log(
-          `Serial number should be at most ${serialNumLength}-digits long.`
-        );
         throw new Error(
           `Serial number should be at most ${serialNumLength}-digits long.`
         );
@@ -120,7 +118,7 @@ module.exports = {
           }
         });
       } catch (error) {
-        console.error("Error:", error.message);
+        throw error;
       }
     }
 
@@ -171,9 +169,7 @@ module.exports = {
         throw new Error("Invalid year");
       }
 
-      const monthNumber = new Date(`${monthName} 1, ${year}`).getMonth() + 1;
-
-      return { month: monthNumber, year };
+      return { month: monthName, year };
     }
 
     // Check if the USSD session is new
@@ -203,10 +199,10 @@ module.exports = {
         const inputDate = `${result[0]}`;
         const selectedPeriod = parseMonthAndYear(inputDate);
         const postData = {
-          month: JSON.stringify(selectedPeriod.month),
+          month: selectedPeriod.month,
           year: JSON.stringify(selectedPeriod.year),
           bankName: selectedBank,
-          accountNumber: JSON.stringify(account),
+          accountNumber: account,
         };
 
         const periodRes = await makePostRequest(
@@ -215,16 +211,20 @@ module.exports = {
           customHeaders
         );
         if (periodRes.message === "Successfully") {
-          if (periodRes.data.paymentStatus === "00") {
-            response = "END Payment is Successful";
-          } else if (periodRes.data.paymentStatus === "10") {
-            response = "END Failed Nuban Validation";
-          } else if (periodRes.data.paymentStatus === "15") {
-            response = "END Payment Failed";
-          } else if (periodRes.data.paymentStatus === "06") {
-            response = "END Payment in Progress";
+          if (periodRes.data.paymentStatus) {
+            if (periodRes.data.paymentStatus === "00") {
+              response = "END Payment is Successful";
+            } else if (periodRes.data.paymentStatus === "10") {
+              response = "END Failed Nuban Validation";
+            } else if (periodRes.data.paymentStatus === "15") {
+              response = "END Payment Failed";
+            } else if (periodRes.data.paymentStatus === "06") {
+              response = "END Payment in Progress";
+            } else {
+              response = "END Paymnet not found";
+            }
           } else {
-            response = "END Paymnet not found";
+            response = "END User Have not recieved Payment";
           }
         } else {
           response = "END Payment not found";
@@ -237,7 +237,7 @@ module.exports = {
         const inputDate = `${result[1]}`;
         const selectedPeriod = parseMonthAndYear(inputDate);
         const postData = {
-          month: JSON.stringify(selectedPeriod.month),
+          month: selectedPeriod.month,
           year: JSON.stringify(selectedPeriod.year),
           bankName: selectedBank,
           accountNumber: JSON.stringify(account),
@@ -248,17 +248,20 @@ module.exports = {
           customHeaders
         );
         if (periodRes.message === "Successfully") {
-          if (periodRes.data.paymentStatus === "00") {
-            // response = `END ${JSON.stringify(periodRes.data, null, 2)}`;
-            response = "END Payment is Successful";
-          } else if (periodRes.data.paymentStatus === "10") {
-            response = "END Failed Nuban Validation";
-          } else if (periodRes.data.paymentStatus === "15") {
-            response = "END Payment Failed";
-          } else if (periodRes.data.paymentStatus === "06") {
-            response = "END Payment in Progress";
+          if (periodRes.data.paymentStatus) {
+            if (periodRes.data.paymentStatus === "00") {
+              response = "END Payment is Successful";
+            } else if (periodRes.data.paymentStatus === "10") {
+              response = "END Failed Nuban Validation";
+            } else if (periodRes.data.paymentStatus === "15") {
+              response = "END Payment Failed";
+            } else if (periodRes.data.paymentStatus === "06") {
+              response = "END Payment in Progress";
+            } else {
+              response = "END Paymnet not found";
+            }
           } else {
-            response = "END Paymnet not found";
+            response = "END User Have not recieved Payment";
           }
         } else {
           response = "END Payment not found";
@@ -271,7 +274,7 @@ module.exports = {
         const inputDate = `${result[2]}`;
         selectedPeriod = parseMonthAndYear(inputDate);
         const postData = {
-          month: JSON.stringify(selectedPeriod.month),
+          month: selectedPeriod.month,
           year: JSON.stringify(selectedPeriod.year),
           bankName: selectedBank,
           accountNumber: JSON.stringify(account),
@@ -283,17 +286,20 @@ module.exports = {
         );
 
         if (periodRes.message === "Successfully") {
-          if (periodRes.data.paymentStatus === "00") {
-            // response = `END ${JSON.stringify(periodRes.data, null, 2)}`;
-            response = "END Payment is Successful";
-          } else if (periodRes.data.paymentStatus === "10") {
-            response = "END Failed Nuban Validation";
-          } else if (periodRes.data.paymentStatus === "15") {
-            response = "END Payment Failed";
-          } else if (periodRes.data.paymentStatus === "06") {
-            response = "END Payment in Progress";
+          if (periodRes.data.paymentStatus) {
+            if (periodRes.data.paymentStatus === "00") {
+              response = "END Payment is Successful";
+            } else if (periodRes.data.paymentStatus === "10") {
+              response = "END Failed Nuban Validation";
+            } else if (periodRes.data.paymentStatus === "15") {
+              response = "END Payment Failed";
+            } else if (periodRes.data.paymentStatus === "06") {
+              response = "END Payment in Progress";
+            } else {
+              response = "END Paymnet not found";
+            }
           } else {
-            response = "END Paymnet not found";
+            response = "END User Have not recieved Payment";
           }
         } else {
           response = "END Payment not found";
@@ -325,8 +331,7 @@ module.exports = {
       const userEnteredAccount = text.substring(2).trim();
 
       if (userEnteredAccount !== "" && !isNaN(userEnteredAccount)) {
-        account = parseInt(userEnteredAccount);
-
+        account = userEnteredAccount;
         accountBanks = [];
         makeRequest(userEnteredAccount);
 

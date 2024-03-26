@@ -1,0 +1,418 @@
+2024-03-26T07:55:08.131Z - error: 
+{
+  "On": "Tue Mar 26 2024:8:55:06 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "Error": {
+    "error": true,
+    "message": "\"month\" is required"
+  },
+  "url": "https://nkeazu.abia.live/veripay/payslip"
+}
+2024-03-26T07:57:20.315Z - error: 
+{
+  "On": "Tue Mar 26 2024:8:57:08 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "\"February\"",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "url": "https://nkeazu.abia.live/veripay/payslip"
+}
+2024-03-26T07:59:49.924Z - info: 
+{
+  "On": "Tue Mar 26 2024:8:59:49 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "\"February\"",
+    "year": "2024",
+    "bankName": "UNION BANK OF NIGERIA PLC",
+    "accountNumber": "0031152993"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-03-26T08:01:38.326Z - info: 
+{
+  "On": "Tue Mar 26 2024:9:01:37 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "\"February\"",
+    "year": "2024",
+    "bankName": "UNION BANK OF NIGERIA PLC",
+    "accountNumber": "0031152993"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-03-26T08:03:07.698Z - info: 
+{
+  "On": "Tue Mar 26 2024:9:03:06 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "February",
+    "year": "2024",
+    "bankName": "UNION BANK OF NIGERIA PLC",
+    "accountNumber": "0031152993"
+  },
+  "response": {
+    "message": "Successfully",
+    "data": {
+      "_id": "65ff61effe8bbb3da23c0f34",
+      "name": "HUSSAINI ABBA",
+      "grade": "09-GL-A",
+      "step": "6",
+      "designation": "none",
+      "cadre": "none",
+      "department": "JUDICIARY  HIGH COURT",
+      "mda": "26051001 - JUDICIARY - HIGH COURT",
+      "month": "February",
+      "year": "2024",
+      "salaryStructure": "GL-A",
+      "verificationCode": "3000359734",
+      "accountNumber": "0031152993",
+      "bankName": "UNION BANK OF NIGERIA PLC",
+      "employmentNumber": "16598",
+      "basicSalary": "35328.44",
+      "totalAllowance": "71245.76",
+      "allowanceDetails": "AUDIT INDUCEMENT=N460.00 ,CONTRACT ADDITION=N3920.07 ,HAZARD=N13066.90 ,HOUSING=N3397.39 ,INDUCEMENT=N13066.90 ,LEAVE GRANT=N3532.84 ,LEGISLATIVE=N9146.83 ,MEAL=N1408.75 ,MEDICAL=N12544.22 ,SHIFT DUTY=N3266.72 ,SPECIAL EDUCATION=N3920.07 ,TRANSPORT=N2106.32 ,UTILITY=N1408.75 ",
+      "gross": "106574.20",
+      "totalDeduction": "6740.55",
+      "deductionDetails": "NHF=N883.21,TAX=909.16, CONTRIBUTORY HEALTHCARE=N3005.12 ,NHF=N883.21 ,NUPSRAW=N1059.85 ",
+      "staffType": "civils",
+      "net": " ",
+      "overPayment": "0.00",
+      "__v": 0,
+      "createdAt": "2024-03-23T23:12:47.663Z",
+      "updatedAt": "2024-03-23T23:12:47.663Z"
+    }
+  }
+}
+2024-03-26T08:09:35.697Z - info: 
+{
+  "On": "Tue Mar 26 2024:9:09:34 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "February",
+    "year": "2024",
+    "bankName": "GUARANTY TRUST BANK PLC",
+    "accountNumber": "0021829591"
+  },
+  "response": {
+    "message": "Successfully",
+    "data": {
+      "_id": "65ff6df21f493ae61c281adb",
+      "name": "OKEKE  KEZIE CHUKWUBIKEM",
+      "grade": "08-TP",
+      "step": "8",
+      "designation": " ",
+      "cadre": "MASTER 3",
+      "department": "SEMB UMUAHIA ZONE: MBOM COMM. HIGH SCH. ",
+      "mda": "SECONDARY EDUCATION MANAGEMENT BOARD",
+      "month": "February",
+      "year": "2024",
+      "salaryStructure": "TEACHER",
+      "verificationCode": "8615013500",
+      "accountNumber": "0021829591",
+      "bankName": "GUARANTY TRUST BANK PLC",
+      "employmentNumber": " ",
+      "basicSalary": "40876.00",
+      "totalAllowance": "15589.00",
+      "allowanceDetails": "M/S=N1300.00 ,RENT=N10589.00 ,T/A=N3000.00 ,U/A=N700.00 ",
+      "gross": "56465.00",
+      "totalDeduction": "3862.60",
+      "deductionDetails": "NHF=N1021.90,TAX=2023.18, NUT=N817.52 ",
+      "staffType": "high-institutions",
+      "net": " ",
+      "overPayment": "0.00",
+      "__v": 0,
+      "createdAt": "2024-03-24T00:04:03.173Z",
+      "updatedAt": "2024-03-24T00:04:03.173Z"
+    }
+  }
+}
+2024-03-26T08:18:20.952Z - info: 
+{
+  "On": "Tue Mar 26 2024:9:18:19 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "February",
+    "year": "2024",
+    "bankName": "UNION BANK OF NIGERIA PLC",
+    "accountNumber": "0031152993"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-03-26T08:20:38.301Z - info: 
+{
+  "On": "Tue Mar 26 2024:9:20:35 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "February",
+    "year": "2024",
+    "bankName": "UNION BANK OF NIGERIA PLC",
+    "accountNumber": "0031152993"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-03-26T08:23:11.358Z - info: 
+{
+  "On": "Tue Mar 26 2024:9:23:10 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "February",
+    "year": "2024",
+    "bankName": "GUARANTY TRUST BANK PLC",
+    "accountNumber": "0021829591"
+  },
+  "response": {
+    "message": "Successfully",
+    "data": {
+      "_id": "65ff6df21f493ae61c281adb",
+      "name": "OKEKE  KEZIE CHUKWUBIKEM",
+      "grade": "08-TP",
+      "step": "8",
+      "designation": " ",
+      "cadre": "MASTER 3",
+      "department": "SEMB UMUAHIA ZONE: MBOM COMM. HIGH SCH. ",
+      "mda": "SECONDARY EDUCATION MANAGEMENT BOARD",
+      "month": "February",
+      "year": "2024",
+      "salaryStructure": "TEACHER",
+      "verificationCode": "8615013500",
+      "accountNumber": "0021829591",
+      "bankName": "GUARANTY TRUST BANK PLC",
+      "employmentNumber": " ",
+      "basicSalary": "40876.00",
+      "totalAllowance": "15589.00",
+      "allowanceDetails": "M/S=N1300.00 ,RENT=N10589.00 ,T/A=N3000.00 ,U/A=N700.00 ",
+      "gross": "56465.00",
+      "totalDeduction": "3862.60",
+      "deductionDetails": "NHF=N1021.90,TAX=2023.18, NUT=N817.52 ",
+      "staffType": "high-institutions",
+      "net": " ",
+      "overPayment": "0.00",
+      "__v": 0,
+      "createdAt": "2024-03-24T00:04:03.173Z",
+      "updatedAt": "2024-03-24T00:04:03.173Z"
+    }
+  }
+}
+2024-03-26T08:27:30.861Z - info: 
+{
+  "On": "Tue Mar 26 2024:9:27:27 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "February",
+    "year": "2024",
+    "bankName": "GUARANTY TRUST BANK PLC",
+    "accountNumber": "0021829591"
+  },
+  "response": {
+    "message": "Successfully",
+    "data": {
+      "_id": "65ff6df21f493ae61c281adb",
+      "name": "OKEKE  KEZIE CHUKWUBIKEM",
+      "grade": "08-TP",
+      "step": "8",
+      "designation": " ",
+      "cadre": "MASTER 3",
+      "department": "SEMB UMUAHIA ZONE: MBOM COMM. HIGH SCH. ",
+      "mda": "SECONDARY EDUCATION MANAGEMENT BOARD",
+      "month": "February",
+      "year": "2024",
+      "salaryStructure": "TEACHER",
+      "verificationCode": "8615013500",
+      "accountNumber": "0021829591",
+      "bankName": "GUARANTY TRUST BANK PLC",
+      "employmentNumber": " ",
+      "basicSalary": "40876.00",
+      "totalAllowance": "15589.00",
+      "allowanceDetails": "M/S=N1300.00 ,RENT=N10589.00 ,T/A=N3000.00 ,U/A=N700.00 ",
+      "gross": "56465.00",
+      "totalDeduction": "3862.60",
+      "deductionDetails": "NHF=N1021.90,TAX=2023.18, NUT=N817.52 ",
+      "staffType": "high-institutions",
+      "net": " ",
+      "overPayment": "0.00",
+      "__v": 0,
+      "createdAt": "2024-03-24T00:04:03.173Z",
+      "updatedAt": "2024-03-24T00:04:03.173Z"
+    }
+  }
+}
+2024-03-26T08:28:50.508Z - info: 
+{
+  "On": "Tue Mar 26 2024:9:28:49 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "January",
+    "year": "2024",
+    "bankName": "GUARANTY TRUST BANK PLC",
+    "accountNumber": "\"0021829591\""
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-03-26T08:31:22.504Z - info: 
+{
+  "On": "Tue Mar 26 2024:9:31:19 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "February",
+    "year": "2024",
+    "bankName": "GUARANTY TRUST BANK PLC",
+    "accountNumber": "0021829591"
+  },
+  "response": {
+    "message": "Successfully",
+    "data": {
+      "_id": "65ff6df21f493ae61c281adb",
+      "name": "OKEKE  KEZIE CHUKWUBIKEM",
+      "grade": "08-TP",
+      "step": "8",
+      "designation": " ",
+      "cadre": "MASTER 3",
+      "department": "SEMB UMUAHIA ZONE: MBOM COMM. HIGH SCH. ",
+      "mda": "SECONDARY EDUCATION MANAGEMENT BOARD",
+      "month": "February",
+      "year": "2024",
+      "salaryStructure": "TEACHER",
+      "verificationCode": "8615013500",
+      "accountNumber": "0021829591",
+      "bankName": "GUARANTY TRUST BANK PLC",
+      "employmentNumber": " ",
+      "basicSalary": "40876.00",
+      "totalAllowance": "15589.00",
+      "allowanceDetails": "M/S=N1300.00 ,RENT=N10589.00 ,T/A=N3000.00 ,U/A=N700.00 ",
+      "gross": "56465.00",
+      "totalDeduction": "3862.60",
+      "deductionDetails": "NHF=N1021.90,TAX=2023.18, NUT=N817.52 ",
+      "staffType": "high-institutions",
+      "net": " ",
+      "overPayment": "0.00",
+      "__v": 0,
+      "createdAt": "2024-03-24T00:04:03.173Z",
+      "updatedAt": "2024-03-24T00:04:03.173Z"
+    }
+  }
+}
+2024-03-26T12:52:57.830Z - info: 
+{
+  "On": "Tue Mar 26 2024:1:52:55 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "February",
+    "year": "2024",
+    "bankName": "UNITED BANK FOR AFRICA PLC",
+    "accountNumber": "2075419907"
+  },
+  "response": {
+    "message": "Successfully",
+    "data": {
+      "_id": "65ff6d9bd9b47b03d027ccf5",
+      "name": "ORJI  OKWUCHI  ANTHONIA",
+      "grade": "07-TRSS",
+      "step": "3",
+      "designation": " ",
+      "cadre": "NONE",
+      "department": "ABA SOUTH LGEA",
+      "mda": "ABA SOUTH LGEA",
+      "month": "February",
+      "year": "2024",
+      "salaryStructure": "TRSS",
+      "verificationCode": "8612996273",
+      "accountNumber": "2075419907",
+      "bankName": "UNITED BANK FOR AFRICA PLC",
+      "employmentNumber": "NA",
+      "basicSalary": "24968.00",
+      "totalAllowance": "12606.00",
+      "allowanceDetails": "MEAL=N1300.00 ,RENT=N7606.00 ,TRANSPORT=N3000.00 ,UTILITY=N700.00 ",
+      "gross": "37574.00",
+      "totalDeduction": "3767.34",
+      "deductionDetails": "NHF=N624.20,TAX=893.78, NASU=N499.36 ,NASU SECL=N150.00 ,NAWS=N600.00 ,NTRS=N1000.00 ",
+      "staffType": "lgea",
+      "net": " ",
+      "overPayment": "0.00",
+      "__v": 0,
+      "createdAt": "2024-03-24T00:02:36.204Z",
+      "updatedAt": "2024-03-24T00:02:36.204Z"
+    }
+  }
+}
+2024-03-26T13:04:20.625Z - info: 
+{
+  "On": "Tue Mar 26 2024:2:04:18 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "February",
+    "year": "2024",
+    "bankName": "UNITED BANK FOR AFRICA PLC",
+    "accountNumber": "2075419907"
+  },
+  "response": {
+    "message": "Successfully",
+    "data": {
+      "_id": "65ff6d9bd9b47b03d027ccf5",
+      "name": "ORJI  OKWUCHI  ANTHONIA",
+      "grade": "07-TRSS",
+      "step": "3",
+      "designation": " ",
+      "cadre": "NONE",
+      "department": "ABA SOUTH LGEA",
+      "mda": "ABA SOUTH LGEA",
+      "month": "February",
+      "year": "2024",
+      "salaryStructure": "TRSS",
+      "verificationCode": "8612996273",
+      "accountNumber": "2075419907",
+      "bankName": "UNITED BANK FOR AFRICA PLC",
+      "employmentNumber": "NA",
+      "basicSalary": "24968.00",
+      "totalAllowance": "12606.00",
+      "allowanceDetails": "MEAL=N1300.00 ,RENT=N7606.00 ,TRANSPORT=N3000.00 ,UTILITY=N700.00 ",
+      "gross": "37574.00",
+      "totalDeduction": "3767.34",
+      "deductionDetails": "NHF=N624.20,TAX=893.78, NASU=N499.36 ,NASU SECL=N150.00 ,NAWS=N600.00 ,NTRS=N1000.00 ",
+      "staffType": "lgea",
+      "net": " ",
+      "overPayment": "0.00",
+      "__v": 0,
+      "createdAt": "2024-03-24T00:02:36.204Z",
+      "updatedAt": "2024-03-24T00:02:36.204Z",
+      "paymentStatus": "00"
+    }
+  }
+}

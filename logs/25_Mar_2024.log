@@ -1,0 +1,162 @@
+2024-03-25T11:10:22.301Z - error: 
+{
+  "On": "Mon Mar 25 2024:12:10:20 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "Error": {
+    "error": true,
+    "message": "Route does not exist."
+  }
+}
+2024-03-25T11:33:17.755Z - error: 
+{
+  "On": "Mon Mar 25 2024:12:33:16 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "Error": {
+    "error": true,
+    "message": "Route does not exist."
+  },
+  "url": "https://api.abia.live"
+}
+2024-03-25T11:35:03.604Z - error: 
+{
+  "On": "Mon Mar 25 2024:12:35:02 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "Error": {
+    "error": true,
+    "message": "Route does not exist."
+  },
+  "url": "https://api.abia.live"
+}
+2024-03-25T11:36:13.439Z - info: 
+{
+  "On": "Mon Mar 25 2024:12:36:12 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-03-25T11:40:07.161Z - info: 
+{
+  "On": "Mon Mar 25 2024:12:40:06 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-03-25T11:41:22.237Z - info: 
+{
+  "On": "Mon Mar 25 2024:12:41:20 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "FIDELITY BANK",
+    "accountNumber": "6161668654"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-03-25T12:06:02.249Z - info: 
+{
+  "On": "Mon Mar 25 2024:1:06:01 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "GUARANTY TRUST BANK PLC",
+    "accountNumber": "21829591"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-03-25T12:06:51.202Z - info: 
+{
+  "On": "Mon Mar 25 2024:1:06:50 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "GUARANTY TRUST BANK PLC",
+    "accountNumber": "21829591"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-03-25T12:32:15.201Z - info: 
+{
+  "On": "Mon Mar 25 2024:1:32:13 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "GUARANTY TRUST BANK PLC",
+    "accountNumber": "\"0021829591\""
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-03-25T13:16:13.615Z - info: 
+{
+  "On": "Mon Mar 25 2024:2:16:12 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "2",
+    "year": "2024",
+    "bankName": "GUARANTY TRUST BANK PLC",
+    "accountNumber": "0021829591"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
