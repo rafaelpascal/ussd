@@ -111,7 +111,7 @@ module.exports = {
     // REQUEST TO GET BANKS
     function makeRequest(accountNo) {
       const accountNumber = accountNo;
-      banks.forEach((item, index) => {
+      banks.forEach((item) => {
         if (isBankAccountValid(accountNumber, item.code)) {
           accountBanks.push(item.name);
         }
