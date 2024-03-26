@@ -58,7 +58,7 @@ module.exports = {
           SessionId: `${sessionId}`,
           Payload: data,
           Error: error.response,
-          url: url,
+          url,
         };
 
         // Log to File
@@ -110,16 +110,12 @@ module.exports = {
 
     // REQUEST TO GET BANKS
     function makeRequest(accountNo) {
-      try {
-        const accountNumber = accountNo;
-        banks.forEach((item, index) => {
-          if (isBankAccountValid(accountNumber, item.code)) {
-            accountBanks.push(item.name);
-          }
-        });
-      } catch (error) {
-        throw error;
-      }
+      const accountNumber = accountNo;
+      banks.forEach((item, index) => {
+        if (isBankAccountValid(accountNumber, item.code)) {
+          accountBanks.push(item.name);
+        }
+      });
     }
 
     // GET PREVIOUS MONTH
