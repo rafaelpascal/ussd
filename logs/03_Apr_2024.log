@@ -1,0 +1,286 @@
+2024-04-03T09:31:10.460Z - info: 
+{
+  "On": "Wed Apr 03 2024:10:31:09 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "March",
+    "year": "2024",
+    "bankName": "POLARIS BANK PLC",
+    "accountNumber": "3045318157"
+  },
+  "response": {
+    "message": "Successful",
+    "data": {
+      "_id": "660bdc2e3c098e2d8296581a",
+      "name": "OFFOR UDOESTHER",
+      "grade": " ",
+      "step": " ",
+      "designation": " ",
+      "cadre": " ",
+      "department": " ",
+      "mda": "POLARIS ZONE",
+      "month": "March",
+      "year": "2024",
+      "salaryStructure": " ",
+      "verificationCode": "8613125372",
+      "accountNumber": "3045318157",
+      "bankName": "POLARIS BANK PLC",
+      "employmentNumber": " ",
+      "basicSalary": " ",
+      "totalAllowance": " ",
+      "allowanceDetails": " ",
+      "gross": "204709.31",
+      "totalDeduction": "1373.89",
+      "deductionDetails": "2734.04",
+      "staffType": "lg-pension",
+      "net": "203335.42",
+      "overPayment": "0.00",
+      "__v": 0,
+      "createdAt": "2024-04-02T10:21:35.396Z",
+      "updatedAt": "2024-04-02T10:21:35.396Z",
+      "paymentStatus": "00"
+    }
+  }
+}
+2024-04-03T09:35:11.763Z - info: 
+{
+  "On": "Wed Apr 03 2024:10:35:10 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "March",
+    "year": "2024",
+    "bankName": "POLARIS BANK PLC",
+    "accountNumber": "3045318157"
+  },
+  "response": {
+    "message": "Successful",
+    "data": {
+      "_id": "660bdc2e3c098e2d8296581a",
+      "name": "OFFOR UDOESTHER",
+      "grade": " ",
+      "step": " ",
+      "designation": " ",
+      "cadre": " ",
+      "department": " ",
+      "mda": "POLARIS ZONE",
+      "month": "March",
+      "year": "2024",
+      "salaryStructure": " ",
+      "verificationCode": "8613125372",
+      "accountNumber": "3045318157",
+      "bankName": "POLARIS BANK PLC",
+      "employmentNumber": " ",
+      "basicSalary": " ",
+      "totalAllowance": " ",
+      "allowanceDetails": " ",
+      "gross": "204709.31",
+      "totalDeduction": "1373.89",
+      "deductionDetails": "2734.04",
+      "staffType": "lg-pension",
+      "net": "203335.42",
+      "overPayment": "0.00",
+      "__v": 0,
+      "createdAt": "2024-04-02T10:21:35.396Z",
+      "updatedAt": "2024-04-02T10:21:35.396Z",
+      "paymentStatus": "00"
+    }
+  }
+}
+2024-04-03T09:40:05.523Z - info: 
+{
+  "On": "Wed Apr 03 2024:10:40:04 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "March",
+    "year": "2024",
+    "bankName": "9 PAYMENT SERVICE BANK",
+    "accountNumber": "3045318157"
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}
+2024-04-03T09:41:26.872Z - info: 
+{
+  "On": "Wed Apr 03 2024:10:41:25 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "March",
+    "year": "2024",
+    "bankName": "POLARIS BANK PLC",
+    "accountNumber": "3045318157"
+  },
+  "response": {
+    "message": "Successful",
+    "data": {
+      "_id": "660bdc2e3c098e2d8296581a",
+      "name": "OFFOR UDOESTHER",
+      "grade": " ",
+      "step": " ",
+      "designation": " ",
+      "cadre": " ",
+      "department": " ",
+      "mda": "POLARIS ZONE",
+      "month": "March",
+      "year": "2024",
+      "salaryStructure": " ",
+      "verificationCode": "8613125372",
+      "accountNumber": "3045318157",
+      "bankName": "POLARIS BANK PLC",
+      "employmentNumber": " ",
+      "basicSalary": " ",
+      "totalAllowance": " ",
+      "allowanceDetails": " ",
+      "gross": "204709.31",
+      "totalDeduction": "1373.89",
+      "deductionDetails": "2734.04",
+      "staffType": "lg-pension",
+      "net": "203335.42",
+      "overPayment": "0.00",
+      "__v": 0,
+      "createdAt": "2024-04-02T10:21:35.396Z",
+      "updatedAt": "2024-04-02T10:21:35.396Z",
+      "paymentStatus": "00"
+    }
+  }
+}
+2024-04-03T09:45:03.572Z - info: 
+{
+  "On": "Wed Apr 03 2024:10:45:02 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "March",
+    "year": "2024",
+    "bankName": "POLARIS BANK PLC",
+    "accountNumber": "3045318157"
+  },
+  "response": {
+    "message": "Successful",
+    "data": {
+      "_id": "660bdc2e3c098e2d8296581a",
+      "name": "OFFOR UDOESTHER",
+      "grade": " ",
+      "step": " ",
+      "designation": " ",
+      "cadre": " ",
+      "department": " ",
+      "mda": "POLARIS ZONE",
+      "month": "March",
+      "year": "2024",
+      "salaryStructure": " ",
+      "verificationCode": "8613125372",
+      "accountNumber": "3045318157",
+      "bankName": "POLARIS BANK PLC",
+      "employmentNumber": " ",
+      "basicSalary": " ",
+      "totalAllowance": " ",
+      "allowanceDetails": " ",
+      "gross": "204709.31",
+      "totalDeduction": "1373.89",
+      "deductionDetails": "2734.04",
+      "staffType": "lg-pension",
+      "net": "203335.42",
+      "overPayment": "0.00",
+      "__v": 0,
+      "createdAt": "2024-04-02T10:21:35.396Z",
+      "updatedAt": "2024-04-02T10:21:35.396Z",
+      "paymentStatus": "00"
+    }
+  }
+}
+2024-04-03T09:46:16.549Z - info: 
+{
+  "On": "Wed Apr 03 2024:10:46:15 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "March",
+    "year": "2024",
+    "bankName": "POLARIS BANK PLC",
+    "accountNumber": "3045318157"
+  },
+  "response": {
+    "message": "Successful",
+    "data": {
+      "_id": "660bdc2e3c098e2d8296581a",
+      "name": "OFFOR UDOESTHER",
+      "grade": " ",
+      "step": " ",
+      "designation": " ",
+      "cadre": " ",
+      "department": " ",
+      "mda": "POLARIS ZONE",
+      "month": "March",
+      "year": "2024",
+      "salaryStructure": " ",
+      "verificationCode": "8613125372",
+      "accountNumber": "3045318157",
+      "bankName": "POLARIS BANK PLC",
+      "employmentNumber": " ",
+      "basicSalary": " ",
+      "totalAllowance": " ",
+      "allowanceDetails": " ",
+      "gross": "204709.31",
+      "totalDeduction": "1373.89",
+      "deductionDetails": "2734.04",
+      "staffType": "lg-pension",
+      "net": "203335.42",
+      "overPayment": "0.00",
+      "__v": 0,
+      "createdAt": "2024-04-02T10:21:35.396Z",
+      "updatedAt": "2024-04-02T10:21:35.396Z",
+      "paymentStatus": "00"
+    }
+  }
+}
+2024-04-03T09:48:30.599Z - info: 
+{
+  "On": "Wed Apr 03 2024:10:48:28 AM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "March",
+    "year": "2024",
+    "bankName": "POLARIS BANK PLC",
+    "accountNumber": "3045318157"
+  },
+  "response": {
+    "message": "Successful",
+    "data": {
+      "_id": "660bdc2e3c098e2d8296581a",
+      "name": "OFFOR UDOESTHER",
+      "grade": " ",
+      "step": " ",
+      "designation": " ",
+      "cadre": " ",
+      "department": " ",
+      "mda": "POLARIS ZONE",
+      "month": "March",
+      "year": "2024",
+      "salaryStructure": " ",
+      "verificationCode": "8613125372",
+      "accountNumber": "3045318157",
+      "bankName": "POLARIS BANK PLC",
+      "employmentNumber": " ",
+      "basicSalary": " ",
+      "totalAllowance": " ",
+      "allowanceDetails": " ",
+      "gross": "204709.31",
+      "totalDeduction": "1373.89",
+      "deductionDetails": "2734.04",
+      "staffType": "lg-pension",
+      "net": "203335.42",
+      "overPayment": "0.00",
+      "__v": 0,
+      "createdAt": "2024-04-02T10:21:35.396Z",
+      "updatedAt": "2024-04-02T10:21:35.396Z",
+      "paymentStatus": "00"
+    }
+  }
+}

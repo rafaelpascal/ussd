@@ -477,3 +477,64 @@
     "data": null
   }
 }
+2024-03-26T13:24:54.019Z - info: 
+{
+  "On": "Tue Mar 26 2024:2:24:52 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "February",
+    "year": "2024",
+    "bankName": "UNITED BANK FOR AFRICA PLC",
+    "accountNumber": "2075419907"
+  },
+  "response": {
+    "message": "Successfully",
+    "data": {
+      "_id": "65ff6d9bd9b47b03d027ccf5",
+      "name": "ORJI  OKWUCHI  ANTHONIA",
+      "grade": "07-TRSS",
+      "step": "3",
+      "designation": " ",
+      "cadre": "NONE",
+      "department": "ABA SOUTH LGEA",
+      "mda": "ABA SOUTH LGEA",
+      "month": "February",
+      "year": "2024",
+      "salaryStructure": "TRSS",
+      "verificationCode": "8612996273",
+      "accountNumber": "2075419907",
+      "bankName": "UNITED BANK FOR AFRICA PLC",
+      "employmentNumber": "NA",
+      "basicSalary": "24968.00",
+      "totalAllowance": "12606.00",
+      "allowanceDetails": "MEAL=N1300.00 ,RENT=N7606.00 ,TRANSPORT=N3000.00 ,UTILITY=N700.00 ",
+      "gross": "37574.00",
+      "totalDeduction": "3767.34",
+      "deductionDetails": "NHF=N624.20,TAX=893.78, NASU=N499.36 ,NASU SECL=N150.00 ,NAWS=N600.00 ,NTRS=N1000.00 ",
+      "staffType": "lgea",
+      "net": " ",
+      "overPayment": "0.00",
+      "__v": 0,
+      "createdAt": "2024-03-24T00:02:36.204Z",
+      "updatedAt": "2024-03-24T00:02:36.204Z",
+      "paymentStatus": "00"
+    }
+  }
+}
+2024-03-26T13:25:00.045Z - info: 
+{
+  "On": "Tue Mar 26 2024:2:24:59 PM",
+  "PhoneNumber": "+2348164493471",
+  "SessionId": "ADDdffgtshhgghghsgh",
+  "Payload": {
+    "month": "January",
+    "year": "2024",
+    "bankName": "UNITED BANK FOR AFRICA PLC",
+    "accountNumber": "\"2075419907\""
+  },
+  "response": {
+    "message": "Record not found.",
+    "data": null
+  }
+}

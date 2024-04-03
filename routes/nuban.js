@@ -206,7 +206,7 @@ module.exports = {
           postData,
           customHeaders
         );
-        if (periodRes.message === "Successfully") {
+        if (periodRes.data !== null) {
           if (periodRes.data.paymentStatus) {
             if (periodRes.data.paymentStatus === "00") {
               response = "END Payment is Successful";
@@ -217,10 +217,10 @@ module.exports = {
             } else if (periodRes.data.paymentStatus === "06") {
               response = "END Payment in Progress";
             } else {
-              response = "END Paymnet not found";
+              response = "END Payment notification in progress";
             }
           } else {
-            response = "END User Have not recieved Payment";
+            response = "END Payment Status not Available";
           }
         } else {
           response = "END Payment not found";
@@ -243,7 +243,7 @@ module.exports = {
           postData,
           customHeaders
         );
-        if (periodRes.message === "Successfully") {
+        if (periodRes.data !== null) {
           if (periodRes.data.paymentStatus) {
             if (periodRes.data.paymentStatus === "00") {
               response = "END Payment is Successful";
@@ -254,10 +254,10 @@ module.exports = {
             } else if (periodRes.data.paymentStatus === "06") {
               response = "END Payment in Progress";
             } else {
-              response = "END Paymnet not found";
+              response = "END Payment notification in progress";
             }
           } else {
-            response = "END User Have not recieved Payment";
+            response = "END Payment Status not Available";
           }
         } else {
           response = "END Payment not found";
@@ -281,7 +281,7 @@ module.exports = {
           customHeaders
         );
 
-        if (periodRes.message === "Successfully") {
+        if (periodRes.data !== null) {
           if (periodRes.data.paymentStatus) {
             if (periodRes.data.paymentStatus === "00") {
               response = "END Payment is Successful";
@@ -292,10 +292,10 @@ module.exports = {
             } else if (periodRes.data.paymentStatus === "06") {
               response = "END Payment in Progress";
             } else {
-              response = "END Paymnet not found";
+              response = "END Payment Notification in progress";
             }
           } else {
-            response = "END User Have not recieved Payment";
+            response = "END Payment Status not Available";
           }
         } else {
           response = "END Payment not found";
