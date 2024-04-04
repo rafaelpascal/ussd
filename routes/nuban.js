@@ -170,7 +170,7 @@ module.exports = {
 
     // Check if the USSD session is new
     const isNewSession = text === "";
-    if (serviceCode !== "*714#") {
+    if (serviceCode !== "*714*200*#") {
       return res.send("Invalid Service Code");
     }
 
@@ -184,8 +184,9 @@ module.exports = {
       response = `CON What would you like to check
         1. My Account Status`;
     } else if (text && text === "1") {
-      response = "CON Input your Account number";
+      response = "CON Type in your Verification number";
     } else if (text?.startsWith("1*") && selectedBank !== "") {
+      console.log(selectedBank);
       const selectedOption = parseInt(text.split("*")[3]);
       if (
         !isNaN(selectedOption) &&
@@ -223,7 +224,7 @@ module.exports = {
             response = "END Payment Status not Available";
           }
         } else {
-          response = "END Payment not found";
+          response = "END Payment not found...";
         }
       } else if (
         !isNaN(selectedOption) &&
@@ -260,7 +261,7 @@ module.exports = {
             response = "END Payment Status not Available";
           }
         } else {
-          response = "END Payment not found";
+          response = "END Payment not found...";
         }
       } else if (
         !isNaN(selectedOption) &&
@@ -298,7 +299,7 @@ module.exports = {
             response = "END Payment Status not Available";
           }
         } else {
-          response = "END Payment not found";
+          response = "END Payment not found...";
         }
       } else {
         response = "END Nothing Selected";
@@ -309,7 +310,6 @@ module.exports = {
       !isNaN(account)
     ) {
       const selectedOption = parseInt(text.split("*")[2]);
-
       if (
         !isNaN(selectedOption) &&
         selectedOption > 0 &&
