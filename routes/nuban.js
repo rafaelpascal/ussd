@@ -9,8 +9,6 @@ const seed = "373373373373";
 const nubanLength = 10;
 const serialNumLength = 9;
 
-let NewaccountBanks = [];
-let selectedBank = "";
 let selectedPeriod = {};
 let account = "";
 let result = "";
@@ -20,12 +18,11 @@ module.exports = {
     const { sessionId, serviceCode, phoneNumber, text } = req.body;
 
     let response = "";
-    let accountBanks = [];
-    let numberedItems = "";
     const date = new Date();
 
     // Example usage:
     const apiUrl = process.env.PAYSLIP_URL;
+    const emailpayslipAPI = process.env.EMAIL_PAYSLIP_URL;
     const customHeaders = {
       clientKey: process.env.CLIENT_KEY,
     };
@@ -58,6 +55,37 @@ module.exports = {
           SessionId: `${sessionId}`,
           Payload: data,
           Error: error.response,
+          url,
+        };
+
+        // Log to File
+        logger.error(JSON.stringify(logObject));
+        return error;
+      }
+    }
+
+    async function sendPayslip(url, data) {
+      try {
+        const response = await axios.post(url, data);
+
+        const logObject = {
+          On: `${date.toDateString()}:${date.toLocaleTimeString()}`,
+          PhoneNumber: `${phoneNumber}`,
+          SessionId: `${sessionId}`,
+          Payload: data,
+          response: response.data,
+        };
+
+        // Log to File
+        logger.info(JSON.stringify(logObject));
+        return response.data;
+      } catch (error) {
+        const logObject = {
+          On: `${date.toDateString()}:${date.toLocaleTimeString()}`,
+          PhoneNumber: `${phoneNumber}`,
+          SessionId: `${sessionId}`,
+          Payload: data,
+          Error: error,
           url,
         };
 
@@ -165,185 +193,183 @@ module.exports = {
         throw new Error("Invalid year");
       }
 
-      return { month: monthName, year };
+      const monthNumber = new Date(`${monthName} 1, ${year}`).getMonth() + 1;
+
+      return { month: monthNumber, year };
     }
 
     // Check if the USSD session is new
     const isNewSession = text === "";
-    if (serviceCode !== "*714*200*#") {
-      return res.send("Invalid Service Code");
-    }
-
-    if (isNewSession) {
-      // Clear the accountBanks array for a new session
-      accountBanks = [];
-      NewaccountBanks = [];
-      selectedBank = "";
-      account = 0;
-
-      response = `CON What would you like to check
-        1. My Account Status`;
-    } else if (text && text === "1") {
-      response = "CON Type in your Verification number";
-    } else if (text?.startsWith("1*") && selectedBank !== "") {
-      console.log(selectedBank);
-      const selectedOption = parseInt(text.split("*")[3]);
-      if (
-        !isNaN(selectedOption) &&
-        selectedOption > 0 &&
-        selectedOption === 1
-      ) {
-        const inputDate = `${result[0]}`;
-        const selectedPeriod = parseMonthAndYear(inputDate);
-        const postData = {
-          month: selectedPeriod.month,
-          year: JSON.stringify(selectedPeriod.year),
-          bankName: selectedBank,
-          accountNumber: account,
-        };
-
-        const periodRes = await makePostRequest(
-          apiUrl,
-          postData,
-          customHeaders
-        );
-        if (periodRes.data !== null) {
-          if (periodRes.data.paymentStatus) {
-            if (periodRes.data.paymentStatus === "00") {
-              response = "END Payment is Successful";
-            } else if (periodRes.data.paymentStatus === "10") {
-              response = "END Failed Nuban Validation";
-            } else if (periodRes.data.paymentStatus === "15") {
-              response = "END Payment Failed";
-            } else if (periodRes.data.paymentStatus === "06") {
-              response = "END Payment in Progress";
-            } else {
-              response = "END Payment notification in progress";
-            }
-          } else {
-            response = "END Payment Status not Available";
-          }
-        } else {
-          response = "END Payment not found...";
-        }
+    const chserviceCode = "*714*200#";
+    const payslipCode = "*714*200*";
+    if (serviceCode !== chserviceCode) {
+      response = `END Invalid Account check Service Code`;
+      // return res.send("Invalid Service Code");
+    } else if (serviceCode === chserviceCode) {
+      if (isNewSession) {
+        // Clear the accountBanks array for a new session
+        accountBanks = [];
+        NewaccountBanks = [];
+        selectedBank = "";
+        account = 0;
+        response = `CON What would you like to check
+      1. My Account Status`;
+      } else if (text && text === "1") {
+        response = "CON Type in your Verification number";
       } else if (
-        !isNaN(selectedOption) &&
-        selectedOption > 0 &&
-        selectedOption === 2
+        text?.startsWith("1*") &&
+        account !== "" &&
+        account !== 0 &&
+        !isNaN(account)
       ) {
-        const inputDate = `${result[1]}`;
-        const selectedPeriod = parseMonthAndYear(inputDate);
-        const postData = {
-          month: selectedPeriod.month,
-          year: JSON.stringify(selectedPeriod.year),
-          bankName: selectedBank,
-          accountNumber: JSON.stringify(account),
-        };
-        const periodRes = await makePostRequest(
-          apiUrl,
-          postData,
-          customHeaders
-        );
-        if (periodRes.data !== null) {
-          if (periodRes.data.paymentStatus) {
-            if (periodRes.data.paymentStatus === "00") {
-              response = "END Payment is Successful";
-            } else if (periodRes.data.paymentStatus === "10") {
-              response = "END Failed Nuban Validation";
-            } else if (periodRes.data.paymentStatus === "15") {
-              response = "END Payment Failed";
-            } else if (periodRes.data.paymentStatus === "06") {
-              response = "END Payment in Progress";
-            } else {
-              response = "END Payment notification in progress";
-            }
-          } else {
-            response = "END Payment Status not Available";
-          }
-        } else {
-          response = "END Payment not found...";
-        }
-      } else if (
-        !isNaN(selectedOption) &&
-        selectedOption > 0 &&
-        selectedOption === 3
-      ) {
-        const inputDate = `${result[2]}`;
-        selectedPeriod = parseMonthAndYear(inputDate);
-        const postData = {
-          month: selectedPeriod.month,
-          year: JSON.stringify(selectedPeriod.year),
-          bankName: selectedBank,
-          accountNumber: JSON.stringify(account),
-        };
-        const periodRes = await makePostRequest(
-          apiUrl,
-          postData,
-          customHeaders
-        );
+        const selectedOption = parseInt(text.split("*")[2]);
+        if (
+          !isNaN(selectedOption) &&
+          selectedOption > 0 &&
+          selectedOption === 1
+        ) {
+          const inputDate = `${result[0]}`;
+          const selectedPeriod = parseMonthAndYear(inputDate);
+          const postData = {
+            month: JSON.stringify(selectedPeriod.month),
+            year: JSON.stringify(selectedPeriod.year),
+            verificationCode: JSON.stringify(account),
+          };
 
-        if (periodRes.data !== null) {
-          if (periodRes.data.paymentStatus) {
-            if (periodRes.data.paymentStatus === "00") {
-              response = "END Payment is Successful";
-            } else if (periodRes.data.paymentStatus === "10") {
-              response = "END Failed Nuban Validation";
-            } else if (periodRes.data.paymentStatus === "15") {
-              response = "END Payment Failed";
-            } else if (periodRes.data.paymentStatus === "06") {
-              response = "END Payment in Progress";
+          const periodRes = await makePostRequest(
+            apiUrl,
+            postData,
+            customHeaders
+          );
+          if (periodRes.data !== null) {
+            if (periodRes.data.paymentStatus) {
+              if (periodRes.data.paymentStatus === "00") {
+                response = "END Payment is Successful";
+              } else if (periodRes.data.paymentStatus === "10") {
+                response = "END Failed Nuban Validation";
+              } else if (periodRes.data.paymentStatus === "15") {
+                response = "END Payment Failed";
+              } else if (periodRes.data.paymentStatus === "06") {
+                response = "END Payment in Progress";
+              } else {
+                response = "END Payment notification in progress";
+              }
             } else {
-              response = "END Payment Notification in progress";
+              response = "END Payment Status not Available";
             }
           } else {
-            response = "END Payment Status not Available";
+            response = "END Payment not found...";
+          }
+        } else if (
+          !isNaN(selectedOption) &&
+          selectedOption > 0 &&
+          selectedOption === 2
+        ) {
+          const inputDate = `${result[1]}`;
+          const selectedPeriod = parseMonthAndYear(inputDate);
+          const postData = {
+            month: JSON.stringify(selectedPeriod.month),
+            year: JSON.stringify(selectedPeriod.year),
+            verificationCode: JSON.stringify(account),
+          };
+          const periodRes = await makePostRequest(
+            apiUrl,
+            postData,
+            customHeaders
+          );
+          if (periodRes.data !== null) {
+            if (periodRes.data.paymentStatus) {
+              if (periodRes.data.paymentStatus === "00") {
+                response = "END Payment is Successful";
+              } else if (periodRes.data.paymentStatus === "10") {
+                response = "END Failed Nuban Validation";
+              } else if (periodRes.data.paymentStatus === "15") {
+                response = "END Payment Failed";
+              } else if (periodRes.data.paymentStatus === "06") {
+                response = "END Payment in Progress";
+              } else {
+                response = "END Payment notification in progress";
+              }
+            } else {
+              response = "END Payment Status not Available";
+            }
+          } else {
+            response = "END Payment not found...";
+          }
+        } else if (
+          !isNaN(selectedOption) &&
+          selectedOption > 0 &&
+          selectedOption === 3
+        ) {
+          const inputDate = `${result[2]}`;
+          selectedPeriod = parseMonthAndYear(inputDate);
+          const postData = {
+            month: JSON.stringify(selectedPeriod.month),
+            year: JSON.stringify(selectedPeriod.year),
+            verificationCode: JSON.stringify(account),
+          };
+          const periodRes = await makePostRequest(
+            apiUrl,
+            postData,
+            customHeaders
+          );
+
+          if (periodRes.data !== null) {
+            if (periodRes.data.paymentStatus) {
+              if (periodRes.data.paymentStatus === "00") {
+                response = "END Payment is Successful";
+              } else if (periodRes.data.paymentStatus === "10") {
+                response = "END Failed Nuban Validation";
+              } else if (periodRes.data.paymentStatus === "15") {
+                response = "END Payment Failed";
+              } else if (periodRes.data.paymentStatus === "06") {
+                response = "END Payment in Progress";
+              } else {
+                response = "END Payment Notification in progress";
+              }
+            } else {
+              response = "END Payment Status not Available";
+            }
+          } else {
+            response = "END Payment not found...";
           }
         } else {
-          response = "END Payment not found...";
+          response = "END Nothing Selected";
         }
-      } else {
-        response = "END Nothing Selected";
-      }
-    } else if (
-      text?.startsWith("1*") &&
-      NewaccountBanks.length > 0 &&
-      !isNaN(account)
-    ) {
-      const selectedOption = parseInt(text.split("*")[2]);
-      if (
-        !isNaN(selectedOption) &&
-        selectedOption > 0 &&
-        selectedOption <= NewaccountBanks[0].length
-      ) {
-        selectedBank = NewaccountBanks[0][selectedOption - 1];
-        // bankSelected = true;
+      } else if (text?.startsWith("1*")) {
+        const userEnteredAccount = text.substring(2).trim();
+        account = parseInt(userEnteredAccount);
         result = getPreviousMonths();
         const ussdResponse = displayDatesAsText(result);
-        response = `CON You selected: ${selectedBank} \n ${ussdResponse}`;
-      } else {
-        response = "CON Invalid selection. Please enter a valid option.";
+        response = `CON Select the Month: \n ${ussdResponse}`;
       }
-    } else if (text?.startsWith("1*")) {
-      const userEnteredAccount = text.substring(2).trim();
+    }
 
-      if (userEnteredAccount !== "" && !isNaN(userEnteredAccount)) {
-        account = userEnteredAccount;
-        accountBanks = [];
-        makeRequest(userEnteredAccount);
+    // SECOND SERVICE
+    if (serviceCode.startsWith("*714*200*") && serviceCode === payslipCode) {
+      if (text?.startsWith("2*")) {
+        const values = text.split("*").slice(1, 4);
 
-        if (accountBanks.length > 0) {
-          NewaccountBanks.push([...accountBanks]);
-          numberedItems = accountBanks.map(
-            (item, index) => `${index + 1}. ${item}`
-          );
-          const resultString = numberedItems.join("\n");
-          response = `CON Select Your Bank : \n${resultString.trim()}`;
+        if (values.length === 3) {
+          let [verificationCode, month, year] = values;
+
+          year = year.substring(0, year.length - 1);
+          const payload = {
+            verificationCode,
+            month,
+            year,
+            baseUrl: "https://nkeazu.abia.live",
+          };
+
+          const payslip = await sendPayslip(emailpayslipAPI, payload);
+          if (payslip) {
+            response = `END Payslip have been sent to Staff email`;
+          } else {
+            response = `END Try again`;
+          }
         } else {
-          response =
-            "CON No banks found for the provided account number. Please enter a valid account number.";
+          response = `END Please Try again`;
         }
-      } else {
-        response = "CON Invalid Account Number. Please enter a valid number.";
       }
     }
 
